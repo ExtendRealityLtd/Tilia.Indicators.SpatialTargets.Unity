@@ -1,20 +1,21 @@
 {
-    "name": "io.extendreality.tilia.{scope}.{feature}.{platform?}",
-    "displayName": "Tilia {scope}.{feature}.{platform?}",
-    "description": "{Description of feature.}",
+    "name": "io.extendreality.tilia.indicators.spatialtargets.unity",
+    "displayName": "Tilia Indicators SpatialTargets Unity",
+    "description": "Indicate points in world space based on the location of a spatial target for the Unity software.",
     "version": "1.0.0",
     "unity": "2018.3",
     "unityRelease": "10f1",
     "keywords": [
-        "pattern"
+        "indicator",
+        "target"
     ],
-    "homepage": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/",
+    "homepage": "https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/",
     "bugs": {
-        "url": "https://github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}/issues"
+        "url": "https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/issues"
     },
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.{scope}.{feature}.{platform?}.git"
+        "url": "ssh://git@github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity.git"
     },
     "license": "MIT",
     "author": {
@@ -23,7 +24,8 @@
         "url": "https://github.com/ExtendRealityLtd"
     },
     "dependencies": {
-        "io.extendreality.zinnia.unity": "X.Y.Z"
+        "io.extendreality.zinnia.unity": "1.16.0",
+        "io.extendreality.tilia.indicators.objectpointers.unity": "1.2.2"
     },
     "files": [
         "*.md",

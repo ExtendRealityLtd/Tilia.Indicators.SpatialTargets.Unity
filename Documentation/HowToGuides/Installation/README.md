@@ -70,6 +70,6 @@ The package will now also show up in the Unity Package Manager UI. From then on 
 [Unity]: https://unity3d.com/
 [Unity Package Manager]: https://docs.unity3d.com/Manual/upm-ui.html
 [Project-Manifest]: https://docs.unity3d.com/Manual/upm-manifestPrj.html
-[Version-Release]: https://img.shields.io/github/release/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity.svg
+[Version-Release]: https://img.shields.io/github/release/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity.svg
 [Releases]: ../../../../../releases
 [Latest-Release]: ../../../../../releases/latest

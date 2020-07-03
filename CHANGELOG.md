@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.0.13...v1.1.0) (2020-07-03)
+
+#### Features
+
+* **API:** add auto-generated API documentation ([a8e3372](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/a8e3372998800e03517ed81bf56bff8aebb8d0f4))
+  > The API documentation is auto generated with docfx and converted to markdown via turndown in a custom nodejs script.
+
+#### Bug Fixes
+
+* **package.json:** add docfx.json file ([43657da](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/43657da26c4f7ff4043b3238bd487002c214a76a))
+  > The docfx.json file was missing from the package.json causing the build process to fail. It has now been added.
+
 ### [1.0.13](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.0.12...v1.0.13) (2020-06-21)
 
 #### Miscellaneous Chores

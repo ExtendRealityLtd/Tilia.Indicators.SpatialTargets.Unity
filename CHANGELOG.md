@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.11](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.1.10...v1.1.11) (2020-08-14)
+
+#### Bug Fixes
+
+* **Dispatcher:** remove double semi colon ([23b4e26](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/23b4e261461bc701eb41ef2c5e22abd26a3e9e99))
+  > The end of line had a double semi colon which has now been removed.
+
 ### [1.1.10](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.1.9...v1.1.10) (2020-08-14)
 
 #### Miscellaneous Chores

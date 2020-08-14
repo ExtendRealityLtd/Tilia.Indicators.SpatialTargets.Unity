@@ -32,7 +32,7 @@
         /// <returns>Whether the remove was successful.</returns>
         public virtual bool RemoveFromSelectedTargets(SpatialTarget target)
         {
-            return SelectedTargets.Remove(target); ;
+            return SelectedTargets.Remove(target);
         }
 
         /// <summary>

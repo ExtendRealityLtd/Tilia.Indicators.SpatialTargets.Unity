@@ -23,6 +23,7 @@ The public interface into the SpatialTarget Prefab.
   * [UseSourcePointOverride]
   * [UseTargetOverride]
 * [Methods]
+  * [Deselect(Boolean)]
   * [OnAfterActionOnHoverChange()]
   * [OnAfterActionOnSelectChange()]
   * [OnAfterIsEnabledChange()]
@@ -183,6 +184,22 @@ public bool UseTargetOverride { get; set; }
 
 ### Methods
 
+#### Deselect(Boolean)
+
+Deselects the containing [SpatialTarget] if it is in a selected state.
+
+##### Declaration
+
+```
+public virtual void Deselect(bool keepInActivatingDispatcher = false)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| System.Boolean | keepInActivatingDispatcher | Whether to keep this in the ActivatingDispatcher.SelectedTargets collection. |
+
 #### OnAfterActionOnHoverChange()
 
 Called after [ActionsOnHover] has been changed.
@@ -249,6 +266,7 @@ protected virtual void OnAfterUseTargetOverrideChange()
 [SpatialTargetFacade.HoverActions]: SpatialTargetFacade.HoverActions.md
 [SpatialTargetConfigurator]: SpatialTargetConfigurator.md
 [SpatialTargetFacade]: SpatialTargetFacade.md
+[SpatialTarget]: SpatialTarget.md
 [ActionsOnHover]: SpatialTargetFacade.md#ActionsOnHover
 [ActionsOnActivate]: SpatialTargetFacade.md#ActionsOnActivate
 [IsEnabled]: SpatialTargetFacade.md#IsEnabled
@@ -274,6 +292,7 @@ protected virtual void OnAfterUseTargetOverrideChange()
 [UseSourcePointOverride]: #UseSourcePointOverride
 [UseTargetOverride]: #UseTargetOverride
 [Methods]: #Methods
+[Deselect(Boolean)]: #DeselectBoolean
 [OnAfterActionOnHoverChange()]: #OnAfterActionOnHoverChange
 [OnAfterActionOnSelectChange()]: #OnAfterActionOnSelectChange
 [OnAfterIsEnabledChange()]: #OnAfterIsEnabledChange

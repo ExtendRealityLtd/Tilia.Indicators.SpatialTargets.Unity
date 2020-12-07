@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.1.20...v1.2.0) (2020-12-07)
+
+#### Features
+
+* **Facade:** expose SpatialTarget Deselect method for easy access ([cfa6144](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/cfa614482000335ea03f3cc870c3d54cb2185a29))
+  > There are occasions where being to deselect a SpatialTarget manually makes sense, but it can only be manually deselected from the internal SpatialTarget component. This exposes that internal method via the SpatialTargetFacade to make it easier to call.
+
 ### [1.1.20](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.1.19...v1.1.20) (2020-11-01)
 
 #### Miscellaneous Chores

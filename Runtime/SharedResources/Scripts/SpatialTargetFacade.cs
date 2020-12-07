@@ -142,6 +142,15 @@
         #endregion
 
         /// <summary>
+        /// Deselects the containing <see cref="SpatialTarget"/> if it is in a selected state.
+        /// </summary>
+        /// <param name="keepInActivatingDispatcher">Whether to keep this in the <see cref="ActivatingDispatcher.SelectedTargets"/> collection.</param>
+        public virtual void Deselect(bool keepInActivatingDispatcher = false)
+        {
+            Configuration.TargetController.DoDeselect(keepInActivatingDispatcher);
+        }
+
+        /// <summary>
         /// Called after <see cref="IsEnabled"/> has been changed.
         /// </summary>
         [CalledAfterChangeOf(nameof(IsEnabled))]

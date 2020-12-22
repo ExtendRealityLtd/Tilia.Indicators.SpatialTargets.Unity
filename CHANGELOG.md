@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.2.9...v1.3.0) (2020-12-22)
+
+#### Features
+
+* **SpatialTarget:** add option to delay the auto deselect on activate ([e3e19c0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/e3e19c08bfa9a7b35e7491331c2a22db03cab6aa))
+  > The DeselectSelf option can now be delayed by a given number of seconds by providing a value to the DeselectSelfDelay property on the Spatial Target Facade.
+
 ### [1.2.9](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.2.8...v1.2.9) (2020-12-22)
 
 #### Miscellaneous Chores

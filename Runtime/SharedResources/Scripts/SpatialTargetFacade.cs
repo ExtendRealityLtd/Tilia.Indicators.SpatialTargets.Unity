@@ -43,11 +43,11 @@
             /// </summary>
             ClearHoveringState = 1 << 0,
             /// <summary>
-            /// Deselects this target upon activating this target.
+            /// De-selects this target upon activating this target.
             /// </summary>
             DeselectSelf = 1 << 1,
             /// <summary>
-            /// Deselects any other activated targets associated with the calling dispatcher.
+            /// De-selects any other activated targets associated with the calling dispatcher.
             /// </summary>
             DeselectOtherTargets = 1 << 2,
             /// <summary>
@@ -91,6 +91,12 @@
         [Serialized]
         [field: DocumentedByXml, UnityFlags]
         public ActivationActions ActionsOnActivate { get; set; } = (ActivationActions)(-1);
+        /// <summary>
+        /// The amount of time to delay de-selecting this Spatial Target after it has been activated if the <see cref="ActionsOnActivate"/> <see cref="ActivationActions.DeselectSelf"/> is enabled.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml]
+        public float DeselectSelfDelay { get; set; }
         /// <summary>
         /// Determine which <see cref="SurfaceData"/> sources can interact with this <see cref="SpatialTargetFacade"/>.
         /// </summary>
@@ -142,7 +148,7 @@
         #endregion
 
         /// <summary>
-        /// Deselects the containing <see cref="SpatialTarget"/> if it is in a selected state.
+        /// De-selects the containing <see cref="SpatialTarget"/> if it is in a selected state.
         /// </summary>
         /// <param name="keepInActivatingDispatcher">Whether to keep this in the <see cref="ActivatingDispatcher.SelectedTargets"/> collection.</param>
         public virtual void Deselect(bool keepInActivatingDispatcher = false)
@@ -191,6 +197,15 @@
         /// </summary>
         [CalledAfterChangeOf(nameof(ActionsOnActivate))]
         protected virtual void OnAfterActionOnSelectChange()
+        {
+            Configuration.ConfigureActivationActions();
+        }
+
+        /// <summary>
+        /// Called after <see cref="DeselectSelfDelay"/> has been changed.
+        /// </summary>
+        [CalledAfterChangeOf(nameof(DeselectSelfDelay))]
+        protected virtual void OnAfterDeselectSelfDelayChange()
         {
             Configuration.ConfigureActivationActions();
         }

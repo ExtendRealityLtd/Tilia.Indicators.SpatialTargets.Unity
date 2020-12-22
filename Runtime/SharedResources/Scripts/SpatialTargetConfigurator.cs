@@ -108,6 +108,7 @@
         {
             TargetController.ExitAllHoveringOnActivated = (Facade.ActionsOnActivate & SpatialTargetFacade.ActivationActions.ClearHoveringState) != 0;
             TargetController.DeactivateSelfOnActivated = (Facade.ActionsOnActivate & SpatialTargetFacade.ActivationActions.DeselectSelf) != 0;
+            TargetController.DeactivateDelay = Facade.DeselectSelfDelay;
             TargetController.DeactivateOtherSpatialTargetsOnActivated = (Facade.ActionsOnActivate & SpatialTargetFacade.ActivationActions.DeselectOtherTargets) != 0;
             ActiveStateContainer.SetActive((Facade.ActionsOnActivate & SpatialTargetFacade.ActivationActions.HideActiveState) == 0);
             CollisionLogicContainer.SetActive((Facade.ActionsOnActivate & SpatialTargetFacade.ActivationActions.DisableCollisionsOnActivate) != 0);

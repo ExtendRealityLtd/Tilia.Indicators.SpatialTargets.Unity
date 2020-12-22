@@ -27,8 +27,8 @@ public enum ActivationActions
 | Name | Description |
 | --- | --- |
 | ClearHoveringState | Clears any existing hover state on this target. |
-| DeselectOtherTargets | Deselects any other activated targets associated with the calling dispatcher. |
-| DeselectSelf | Deselects this target upon activating this target. |
+| DeselectOtherTargets | De-selects any other activated targets associated with the calling dispatcher. |
+| DeselectSelf | De-selects this target upon activating this target. |
 | DisableCollisionsOnActivate | Prevents the pointer from continuing to collide with the target when it is activated. |
 | HideActiveState | Hides the target active visual state. |
 

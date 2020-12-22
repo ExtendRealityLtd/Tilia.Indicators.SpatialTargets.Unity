@@ -19,6 +19,7 @@ A target in a spatial location that can react to given SurfaceData.
 * [Properties]
   * [ActivatingDispatcher]
   * [ApplySelectedTargetProperties]
+  * [DeactivateDelay]
   * [DeactivateOtherSpatialTargetsOnActivated]
   * [DeactivateSelfOnActivated]
   * [ExitAllHoveringOnActivated]
@@ -34,6 +35,7 @@ A target in a spatial location that can react to given SurfaceData.
   * [CreateHoverPayload(SurfaceData)]
   * [CreateSelectedPayload(SurfaceData)]
   * [Deselect(Boolean)]
+  * [DoDeselect()]
   * [DoDeselect(Boolean)]
   * [DoEnter(SurfaceData)]
   * [DoExit(SurfaceData)]
@@ -164,6 +166,16 @@ The Transform properties to apply the selected target overrides on.
 
 ```
 public TransformProperties ApplySelectedTargetProperties { get; set; }
+```
+
+#### DeactivateDelay
+
+The delay duration to wait before deactivating.
+
+##### Declaration
+
+```
+public float DeactivateDelay { get; set; }
 ```
 
 #### DeactivateOtherSpatialTargetsOnActivated
@@ -324,7 +336,7 @@ protected virtual SurfaceData CreateSelectedPayload(SurfaceData data)
 
 #### Deselect(Boolean)
 
-Deselects this [SpatialTarget] if it is in a selected state.
+De-selects this [SpatialTarget] if it is in a selected state.
 
 ##### Declaration
 
@@ -342,16 +354,26 @@ public virtual bool Deselect(bool keepInActivatingDispatcher = false)
 
 | Type | Description |
 | --- | --- |
-| System.Boolean | Whether the deselect was successful. |
+| System.Boolean | Whether the de-select was successful. |
 
-#### DoDeselect(Boolean)
+#### DoDeselect()
 
-Deselects this [SpatialTarget] if it is in a selected state.
+De-selects this [SpatialTarget] if it is in a selected state.
 
 ##### Declaration
 
 ```
-public virtual void DoDeselect(bool keepInActivatingDispatcher = false)
+public virtual void DoDeselect()
+```
+
+#### DoDeselect(Boolean)
+
+De-selects this [SpatialTarget] if it is in a selected state.
+
+##### Declaration
+
+```
+public virtual void DoDeselect(bool keepInActivatingDispatcher)
 ```
 
 ##### Parameters
@@ -563,6 +585,7 @@ public virtual bool Select(SpatialTargetDispatcher dispatcher, SurfaceData data)
 [Properties]: #Properties
 [ActivatingDispatcher]: #ActivatingDispatcher
 [ApplySelectedTargetProperties]: #ApplySelectedTargetProperties
+[DeactivateDelay]: #DeactivateDelay
 [DeactivateOtherSpatialTargetsOnActivated]: #DeactivateOtherSpatialTargetsOnActivated
 [DeactivateSelfOnActivated]: #DeactivateSelfOnActivated
 [ExitAllHoveringOnActivated]: #ExitAllHoveringOnActivated
@@ -578,6 +601,7 @@ public virtual bool Select(SpatialTargetDispatcher dispatcher, SurfaceData data)
 [CreateHoverPayload(SurfaceData)]: #CreateHoverPayloadSurfaceData
 [CreateSelectedPayload(SurfaceData)]: #CreateSelectedPayloadSurfaceData
 [Deselect(Boolean)]: #DeselectBoolean
+[DoDeselect()]: #DoDeselect
 [DoDeselect(Boolean)]: #DoDeselectBoolean
 [DoEnter(SurfaceData)]: #DoEnterSurfaceData
 [DoExit(SurfaceData)]: #DoExitSurfaceData

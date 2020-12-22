@@ -45,6 +45,12 @@
         [field: DocumentedByXml]
         public bool DeactivateSelfOnActivated { get; set; } = true;
         /// <summary>
+        /// The delay duration to wait before deactivating.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml]
+        public float DeactivateDelay { get; set; }
+        /// <summary>
         /// Deactivates any other <see cref="SpatialTarget"/> connected to the same <see cref="SpatialTargetDispatcher"/> when this <see cref="SpatialTarget"/> is activated.
         /// </summary>
         [Serialized]
@@ -288,7 +294,15 @@
 
             if (DeactivateSelfOnActivated)
             {
-                return Deselect();
+                if (DeactivateDelay.ApproxEquals(0f))
+                {
+                    return Deselect();
+                }
+                else
+                {
+                    Invoke("DoDeselect", DeactivateDelay);
+                    return true;
+                }
             }
 
             return true;
@@ -304,10 +318,10 @@
         }
 
         /// <summary>
-        /// Deselects this <see cref="SpatialTarget"/> if it is in a selected state.
+        /// De-selects this <see cref="SpatialTarget"/> if it is in a selected state.
         /// </summary>
         /// <param name="keepInActivatingDispatcher">Whether to keep this in the <see cref="ActivatingDispatcher.SelectedTargets"/> collection.</param>
-        /// <returns>Whether the deselect was successful.</returns>
+        /// <returns>Whether the de-select was successful.</returns>
         [RequiresBehaviourState]
         public virtual bool Deselect(bool keepInActivatingDispatcher = false)
         {
@@ -331,12 +345,20 @@
         }
 
         /// <summary>
-        /// Deselects this <see cref="SpatialTarget"/> if it is in a selected state.
+        /// De-selects this <see cref="SpatialTarget"/> if it is in a selected state.
         /// </summary>
         /// <param name="keepInActivatingDispatcher">Whether to keep this in the <see cref="ActivatingDispatcher.SelectedTargets"/> collection.</param>
-        public virtual void DoDeselect(bool keepInActivatingDispatcher = false)
+        public virtual void DoDeselect(bool keepInActivatingDispatcher)
         {
             Deselect(keepInActivatingDispatcher);
+        }
+
+        /// <summary>
+        /// De-selects this <see cref="SpatialTarget"/> if it is in a selected state.
+        /// </summary>
+        public virtual void DoDeselect()
+        {
+            Deselect(false);
         }
 
         /// <summary>

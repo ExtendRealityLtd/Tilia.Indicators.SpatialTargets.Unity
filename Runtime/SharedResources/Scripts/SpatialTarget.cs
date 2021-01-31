@@ -6,6 +6,7 @@
     using Malimbe.XmlDocumentationAttribute;
     using System;
     using System.Collections.Generic;
+    using System.Linq;
     using UnityEngine;
     using UnityEngine.Events;
     using Zinnia.Data.Attribute;
@@ -163,7 +164,7 @@
             SurfaceData hoverPayload = CreateHoverPayload(data);
             IsHovered = true;
 
-            if (!HoveringElements.Contains(data))
+            if (!HoveringElements.Any(element => element.Transform.Equals(data.Transform)))
             {
                 HoveringElements.Add(data);
 
@@ -188,6 +189,33 @@
         }
 
         /// <summary>
+        /// Reacts to a <see cref="GameObject"/> entering the target spatial location.
+        /// </summary>
+        /// <param name="enteringObject">The entering object.</param>
+        /// <returns>Whether the enter was successful.</returns>
+        [RequiresBehaviourState]
+        public virtual bool Enter(GameObject enteringObject)
+        {
+            if (enteringObject == null)
+            {
+                return false;
+            }
+
+            SurfaceData surfaceData = new SurfaceData();
+            surfaceData.Transform = enteringObject.transform;
+            return Enter(surfaceData);
+        }
+
+        /// <summary>
+        /// Reacts to a <see cref="GameObject"/> entering the target spatial location.
+        /// </summary>
+        /// <param name="enteringObject">The entering object.</param>
+        public virtual void DoEnter(GameObject enteringObject)
+        {
+            Enter(enteringObject);
+        }
+
+        /// <summary>
         /// Reacts to <see cref="SurfaceData"/> exiting from the target spatial location.
         /// </summary>
         /// <param name="data">The exiting data.</param>
@@ -200,7 +228,7 @@
                 return false;
             }
 
-            if (HoveringElements.Remove(data))
+            if (HoveringElements.RemoveAll(element => element.Transform.Equals(data.Transform)) > 0)
             {
                 SurfaceData hoverPayload = CreateHoverPayload(data);
 
@@ -225,6 +253,33 @@
         public virtual void DoExit(SurfaceData data)
         {
             Exit(data);
+        }
+
+        /// <summary>
+        /// Reacts to a <see cref="GameObject"/> exiting from the target spatial location.
+        /// </summary>
+        /// <param name="exitingObject">The exiting object.</param>
+        /// <returns>Whether the exit was successful.</returns>
+        [RequiresBehaviourState]
+        public virtual bool Exit(GameObject exitingObject)
+        {
+            if (exitingObject == null)
+            {
+                return false;
+            }
+
+            SurfaceData surfaceData = new SurfaceData();
+            surfaceData.Transform = exitingObject.transform;
+            return Exit(surfaceData);
+        }
+
+        /// <summary>
+        /// Reacts to a <see cref="GameObject"/> exiting from the target spatial location.
+        /// </summary>
+        /// <param name="exitingObject">The exiting object.</param>
+        public virtual void DoExit(GameObject exitingObject)
+        {
+            Exit(exitingObject);
         }
 
         /// <summary>
@@ -255,7 +310,6 @@
         /// </summary>
         /// <param name="dispatcher">The dispatcher calling the method.</param>
         /// <param name="data">The selecting data.</param>
-        [RequiresBehaviourState]
         public virtual void DoSelect(SpatialTargetDispatcher dispatcher, SurfaceData data)
         {
             Select(dispatcher, data);
@@ -318,6 +372,33 @@
         }
 
         /// <summary>
+        /// Reacts to a <see cref="GameObject"/> selecting on target spatial location.
+        /// </summary>
+        /// <param name="selectingObject">The selecting object.</param>
+        /// <returns>Whether the select was successful.</returns>
+        [RequiresBehaviourState]
+        public virtual bool Select(GameObject selectingObject)
+        {
+            if (selectingObject == null)
+            {
+                return false;
+            }
+
+            SurfaceData surfaceData = new SurfaceData();
+            surfaceData.Transform = selectingObject.transform;
+            return Select(surfaceData);
+        }
+
+        /// <summary>
+        /// Reacts to a <see cref="GameObject"/> selecting on target spatial location.
+        /// </summary>
+        /// <param name="selectingObject">The selecting object.</param>
+        public virtual void DoSelect(GameObject selectingObject)
+        {
+            Select(selectingObject);
+        }
+
+        /// <summary>
         /// De-selects this <see cref="SpatialTarget"/> if it is in a selected state.
         /// </summary>
         /// <param name="keepInActivatingDispatcher">Whether to keep this in the <see cref="ActivatingDispatcher.SelectedTargets"/> collection.</param>
@@ -369,7 +450,11 @@
         /// <returns>Whether the data is valid.</returns>
         protected virtual bool IsValidData(SurfaceData data, bool checkIfHovered = false)
         {
-            return data.Transform != null && data.Transform.gameObject != null && SourceValidity.Accepts(data.Transform.gameObject) && (!checkIfHovered || HoveringElements.Contains(data));
+            return data.Transform != null &&
+                data.Transform.gameObject != null &&
+                SourceValidity.Accepts(data.Transform.gameObject) &&
+                (!checkIfHovered || HoveringElements.Any(element => element.Transform.Equals(data.Transform)));
+
         }
 
         /// <summary>

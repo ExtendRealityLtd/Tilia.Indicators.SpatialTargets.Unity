@@ -37,13 +37,19 @@ A target in a spatial location that can react to given SurfaceData.
   * [Deselect(Boolean)]
   * [DoDeselect()]
   * [DoDeselect(Boolean)]
+  * [DoEnter(GameObject)]
   * [DoEnter(SurfaceData)]
+  * [DoExit(GameObject)]
   * [DoExit(SurfaceData)]
+  * [DoSelect(GameObject)]
   * [DoSelect(SurfaceData)]
   * [DoSelect(SpatialTargetDispatcher, SurfaceData)]
+  * [Enter(GameObject)]
   * [Enter(SurfaceData)]
+  * [Exit(GameObject)]
   * [Exit(SurfaceData)]
   * [IsValidData(SurfaceData, Boolean)]
+  * [Select(GameObject)]
   * [Select(SurfaceData)]
   * [Select(SpatialTargetDispatcher, SurfaceData)]
 
@@ -382,6 +388,22 @@ public virtual void DoDeselect(bool keepInActivatingDispatcher)
 | --- | --- | --- |
 | System.Boolean | keepInActivatingDispatcher | Whether to keep this in the ActivatingDispatcher.SelectedTargets collection. |
 
+#### DoEnter(GameObject)
+
+Reacts to a GameObject entering the target spatial location.
+
+##### Declaration
+
+```
+public virtual void DoEnter(GameObject enteringObject)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | enteringObject | The entering object. |
+
 #### DoEnter(SurfaceData)
 
 Reacts to SurfaceData entering the target spatial location.
@@ -398,6 +420,22 @@ public virtual void DoEnter(SurfaceData data)
 | --- | --- | --- |
 | SurfaceData | data | The entering data. |
 
+#### DoExit(GameObject)
+
+Reacts to a GameObject exiting from the target spatial location.
+
+##### Declaration
+
+```
+public virtual void DoExit(GameObject exitingObject)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | exitingObject | The exiting object. |
+
 #### DoExit(SurfaceData)
 
 Reacts to SurfaceData exiting from the target spatial location.
@@ -413,6 +451,22 @@ public virtual void DoExit(SurfaceData data)
 | Type | Name | Description |
 | --- | --- | --- |
 | SurfaceData | data | The exiting data. |
+
+#### DoSelect(GameObject)
+
+Reacts to a GameObject selecting on target spatial location.
+
+##### Declaration
+
+```
+public virtual void DoSelect(GameObject selectingObject)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | selectingObject | The selecting object. |
 
 #### DoSelect(SurfaceData)
 
@@ -447,6 +501,28 @@ public virtual void DoSelect(SpatialTargetDispatcher dispatcher, SurfaceData dat
 | [SpatialTargetDispatcher] | dispatcher | The dispatcher calling the method. |
 | SurfaceData | data | The selecting data. |
 
+#### Enter(GameObject)
+
+Reacts to a GameObject entering the target spatial location.
+
+##### Declaration
+
+```
+public virtual bool Enter(GameObject enteringObject)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | enteringObject | The entering object. |
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Boolean | Whether the enter was successful. |
+
 #### Enter(SurfaceData)
 
 Reacts to SurfaceData entering the target spatial location.
@@ -468,6 +544,28 @@ public virtual bool Enter(SurfaceData data)
 | Type | Description |
 | --- | --- |
 | System.Boolean | Whether the enter was successful. |
+
+#### Exit(GameObject)
+
+Reacts to a GameObject exiting from the target spatial location.
+
+##### Declaration
+
+```
+public virtual bool Exit(GameObject exitingObject)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | exitingObject | The exiting object. |
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Boolean | Whether the exit was successful. |
 
 #### Exit(SurfaceData)
 
@@ -513,6 +611,28 @@ protected virtual bool IsValidData(SurfaceData data, bool checkIfHovered = false
 | Type | Description |
 | --- | --- |
 | System.Boolean | Whether the data is valid. |
+
+#### Select(GameObject)
+
+Reacts to a GameObject selecting on target spatial location.
+
+##### Declaration
+
+```
+public virtual bool Select(GameObject selectingObject)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | selectingObject | The selecting object. |
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Boolean | Whether the select was successful. |
 
 #### Select(SurfaceData)
 
@@ -603,12 +723,18 @@ public virtual bool Select(SpatialTargetDispatcher dispatcher, SurfaceData data)
 [Deselect(Boolean)]: #DeselectBoolean
 [DoDeselect()]: #DoDeselect
 [DoDeselect(Boolean)]: #DoDeselectBoolean
+[DoEnter(GameObject)]: #DoEnterGameObject
 [DoEnter(SurfaceData)]: #DoEnterSurfaceData
+[DoExit(GameObject)]: #DoExitGameObject
 [DoExit(SurfaceData)]: #DoExitSurfaceData
+[DoSelect(GameObject)]: #DoSelectGameObject
 [DoSelect(SurfaceData)]: #DoSelectSurfaceData
 [DoSelect(SpatialTargetDispatcher, SurfaceData)]: #DoSelectSpatialTargetDispatcher-SurfaceData
+[Enter(GameObject)]: #EnterGameObject
 [Enter(SurfaceData)]: #EnterSurfaceData
+[Exit(GameObject)]: #ExitGameObject
 [Exit(SurfaceData)]: #ExitSurfaceData
 [IsValidData(SurfaceData, Boolean)]: #IsValidDataSurfaceData-Boolean
+[Select(GameObject)]: #SelectGameObject
 [Select(SurfaceData)]: #SelectSurfaceData
 [Select(SpatialTargetDispatcher, SurfaceData)]: #SelectSpatialTargetDispatcher-SurfaceData

@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.4.1](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.4.0...v1.4.1) (2021-01-31)
+
+#### Bug Fixes
+
+* **API:** add missing api documentation ([4383a26](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/4383a26d64236db1e2ab6b57f4bda1bc1e8d1a1f))
+  > The docs for the SpatialTarget changes were not generated and have now been auto generated so they are up to date.
+
 ## [1.4.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.3.2...v1.4.0) (2021-01-31)
 
 #### Features

@@ -2,7 +2,7 @@
     "name": "io.extendreality.tilia.indicators.spatialtargets.unity",
     "displayName": "Tilia Indicators SpatialTargets Unity",
     "description": "Indicate points in world space based on the location of a spatial target for the Unity software.",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "unity": "2018.3",
     "unityRelease": "10f1",
     "keywords": [

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.3.2...v1.4.0) (2021-01-31)
+
+#### Features
+
+* **SpatialTarget:** allow gameobject to be passed to enter,exit,select ([a1d3fcb](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/a1d3fcb03c5d0b8af3b26b5507e5dc6aaec926eb))
+  > The SpatialTarget can now accept a GameObject as the parameter for `Enter`, `Exit` and `Select` which will just make a basic SurfaceData object to be passed into the normal methods. This allows the potential for any object to trigger the spatial target states, such as an Interactor to touch the spatial target and still affect the states.
+
 ### [1.3.2](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.3.1...v1.3.2) (2021-01-07)
 
 #### Miscellaneous Chores

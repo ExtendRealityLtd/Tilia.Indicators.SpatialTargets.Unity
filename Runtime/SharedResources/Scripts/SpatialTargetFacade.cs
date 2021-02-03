@@ -8,6 +8,7 @@
     using UnityEngine;
     using UnityEngine.Events;
     using Zinnia.Data.Attribute;
+    using Zinnia.Data.Collection.List;
     using Zinnia.Data.Type;
     using Zinnia.Rule;
 
@@ -103,6 +104,12 @@
         [Serialized, Cleared]
         [field: DocumentedByXml]
         public RuleContainer SourceValidity { get; set; }
+        /// <summary>
+        /// A <see cref="UnityEngine.Object"/> collection of objects that can collide with the spatial target.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml]
+        public UnityObjectObservableList CollidableObjects { get; set; }
         #endregion
 
         #region Target Events

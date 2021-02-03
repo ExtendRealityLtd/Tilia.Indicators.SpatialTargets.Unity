@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.4.1...v1.5.0) (2021-02-03)
+
+#### Features
+
+* **prefabs:** allow object collisions to interact with target ([4adef43](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/4adef4305b963511e4b65b40be0234bb01b4b882))
+  > The Spatial Target can now be interacted with by colliding objects with it and the new optional hover collider allows for the hover state to be activated when the colliding object is near the target.
+  > 
+  > The new collision states are only activated if the collidable objects list is populated, otherwise it is ignored and the trigger collider is disabled.
+
 ### [1.4.1](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.4.0...v1.4.1) (2021-01-31)
 
 #### Bug Fixes

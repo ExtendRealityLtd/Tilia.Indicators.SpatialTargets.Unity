@@ -17,6 +17,7 @@ The public interface into the SpatialTarget Prefab.
 * [Properties]
   * [ActionsOnActivate]
   * [ActionsOnHover]
+  * [CollidableObjects]
   * [Configuration]
   * [DeselectSelfDelay]
   * [IsEnabled]
@@ -132,6 +133,16 @@ Actions to perform when the [SpatialTargetFacade] is hovered over.
 
 ```
 public SpatialTargetFacade.HoverActions ActionsOnHover { get; set; }
+```
+
+#### CollidableObjects
+
+A UnityEngine.Object collection of objects that can collide with the spatial target.
+
+##### Declaration
+
+```
+public UnityObjectObservableList CollidableObjects { get; set; }
 ```
 
 #### Configuration
@@ -311,6 +322,7 @@ protected virtual void OnAfterUseTargetOverrideChange()
 [Properties]: #Properties
 [ActionsOnActivate]: #ActionsOnActivate
 [ActionsOnHover]: #ActionsOnHover
+[CollidableObjects]: #CollidableObjects
 [Configuration]: #Configuration
 [DeselectSelfDelay]: #DeselectSelfDelay
 [IsEnabled]: #IsEnabled

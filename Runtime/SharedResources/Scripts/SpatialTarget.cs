@@ -201,8 +201,7 @@
                 return false;
             }
 
-            SurfaceData surfaceData = new SurfaceData();
-            surfaceData.Transform = enteringObject.transform;
+            SurfaceData surfaceData = new SurfaceData(enteringObject.transform);
             return Enter(surfaceData);
         }
 
@@ -268,8 +267,7 @@
                 return false;
             }
 
-            SurfaceData surfaceData = new SurfaceData();
-            surfaceData.Transform = exitingObject.transform;
+            SurfaceData surfaceData = new SurfaceData(exitingObject.transform);
             return Exit(surfaceData);
         }
 
@@ -384,8 +382,7 @@
                 return false;
             }
 
-            SurfaceData surfaceData = new SurfaceData();
-            surfaceData.Transform = selectingObject.transform;
+            SurfaceData surfaceData = new SurfaceData(selectingObject.transform);
             return Select(surfaceData);
         }
 

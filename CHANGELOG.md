@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.5.4](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.5.3...v1.5.4) (2021-02-06)
+
+#### Bug Fixes
+
+* **prefabs:** allow collision select after deselect occurs ([81dd845](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/81dd8453dd2a8bfc0ffb3a9765a6b17f05e38d52))
+  > There was an issue where the collision select would not be available after the deselect was called because the select activation was only happening on the LastExited event, meaning select can only happen after everything stops hovering over it. But a deselect event should also allow select to occur again.
+
 ### [1.5.3](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.5.2...v1.5.3) (2021-02-04)
 
 #### Miscellaneous Chores

@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.5.7](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.5.6...v1.5.7) (2021-03-03)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.zinnia.unity from 1.31.0 to 1.31.1 ([701c6fd](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/701c6fd5e165d0d1bb7940ddee0e699fbac96ed6))
+  > Bumps [io.extendreality.zinnia.unity](https://github.com/ExtendRealityLtd/Zinnia.Unity) from 1.31.0 to 1.31.1. - [Release notes](https://github.com/ExtendRealityLtd/Zinnia.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Zinnia.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Zinnia.Unity/compare/v1.31.0...v1.31.1)
+  > 
+  > Signed-off-by: dependabot[bot] <support@github.com>
+
 ### [1.5.6](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.5.5...v1.5.6) (2021-02-27)
 
 #### Miscellaneous Chores

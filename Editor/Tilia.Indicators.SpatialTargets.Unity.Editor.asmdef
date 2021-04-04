@@ -1,0 +1,18 @@
+{
+    "name": "Tilia.Indicators.SpatialTargets.Unity.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f3de13d5e4f1b8348b7c3427ae3e8988"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

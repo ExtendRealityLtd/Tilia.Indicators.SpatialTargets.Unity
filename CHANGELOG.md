@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.6.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.5.10...v1.6.0) (2021-04-07)
+
+#### Features
+
+* **Utility:** add prefab creator ([837981b](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/837981bbaac74413004563a5516443ba350e6d09))
+  > The latest version of Zinnia has the basis of a prefab creator that can be used to enable easy adding of prefabs to a scene without needing to drag and drop from directories. Instead a new menu item is added for quickly adding prefabs. The guide has been updated to accommodate this and the FodyWeavers.xml is now located in the root to serve both the Runtime and Editor scripts.
+* **Utility:** add prefab creator ([e3e6630](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/e3e6630724dcd2108b77802be6a9806ee3223082))
+  > The latest version of Zinnia has the basis of a prefab creator that can be used to enable easy adding of prefabs to a scene without needing to drag and drop from directories. Instead a new menu item is added for quickly adding prefabs. The guide has been updated to accommodate this and the FodyWeavers.xml is now located in the root to serve both the Runtime and Editor scripts.
+
+#### Bug Fixes
+
+* **package.json:** add missing reference to Editor directory ([65c7b42](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/65c7b42a3391ff2c2d56cd36017c5ce27141552d))
+  > The build will fail without referencing this new Editor directory so it has now been added to the package.
+
 ### [1.5.10](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.5.9...v1.5.10) (2021-03-29)
 
 #### Miscellaneous Chores

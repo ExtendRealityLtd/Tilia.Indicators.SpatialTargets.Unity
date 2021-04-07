@@ -1,4 +1,4 @@
-namespace Tilia.Indicators.SpatialTargets.Utility
+namespace Tilia.CameraRigs.TrackedAlias.Utility
 {
     using System.IO;
     using UnityEditor;

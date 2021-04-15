@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.6.1...v1.7.0) (2021-04-15)
+
+#### Features
+
+* **Dispatcher:** add option for dispatcher to deselect all on null ([66b885f](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/66b885fe38dca38d035c889a259d0b1373706dce))
+  > The Dispatcher can now optionally deselect all existing selected targets when a null target is passed to the Select method.
+
 ### [1.6.1](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.6.0...v1.6.1) (2021-04-07)
 
 #### Miscellaneous Chores

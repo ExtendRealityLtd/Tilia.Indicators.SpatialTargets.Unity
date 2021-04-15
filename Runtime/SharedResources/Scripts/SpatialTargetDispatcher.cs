@@ -14,6 +14,12 @@
     public class SpatialTargetDispatcher : Dispatcher
     {
         /// <summary>
+        /// Whether to de-select all selected targets when an empty target is selected.
+        /// </summary>
+        [Serialized]
+        [field: DocumentedByXml]
+        public bool DelselectAllOnEmptyTarget { get; set; }
+        /// <summary>
         /// Determine if the <see cref="SpatialTarget"/> can be dispatched to.
         /// </summary>
         [Serialized, Cleared]
@@ -64,6 +70,10 @@
             SpatialTarget target = GetSpatialTarget(data);
             if (target == null)
             {
+                if (DelselectAllOnEmptyTarget)
+                {
+                    DeselectOtherTargetsOnSelect(target);
+                }
                 return false;
             }
 
@@ -115,7 +125,7 @@
         /// <param name="target">The current <see cref="SpatialTarget"/> which will be ignored in the deselect.</param>
         protected virtual void DeselectOtherTargetsOnSelect(SpatialTarget target)
         {
-            if (target.DeactivateOtherSpatialTargetsOnActivated)
+            if (target == null || target.DeactivateOtherSpatialTargetsOnActivated)
             {
                 foreach (SpatialTarget other in SelectedTargets)
                 {

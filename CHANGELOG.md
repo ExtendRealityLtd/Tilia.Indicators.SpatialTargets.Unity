@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.7.5](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.7.4...v1.7.5) (2021-06-10)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.indicators.objectpointers.unity ([1e0eade](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/1e0eadecda67cebe52b6b10fc15714c068be2104))
+  > Bumps [io.extendreality.tilia.indicators.objectpointers.unity](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity) from 1.7.5 to 1.7.6. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/compare/v1.7.5...v1.7.6)
+* **README.md:** update title logo to related-media repo ([aec12bb](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/aec12bb42ccaba30b2ca2c8d800e5dcb15842a87))
+  > The title logo is now located on the related-media repo.
+
 ### [1.7.4](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.7.3...v1.7.4) (2021-05-09)
 
 #### Miscellaneous Chores

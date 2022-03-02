@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.7.32...v1.8.0) (2022-03-02)
+
+#### Features
+
+* **package.json:** add information urls to package ([c68b126](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/c68b126a2b8e32e3fde259834e8fdfd539eee8d3))
+  > The changelog, documentation and license url has been added to the package.json as these are used within the Unity package manager.
+
 ### [1.7.32](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.7.31...v1.7.32) (2022-02-14)
 
 #### Miscellaneous Chores

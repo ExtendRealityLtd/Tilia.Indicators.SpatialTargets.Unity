@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.8.3](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.8.2...v1.8.3) (2022-03-15)
+
+#### Miscellaneous Chores
+
+* **dependabot:** remove bddckr from reviewers ([3d76df0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/3d76df05c49e0356e03356dbe1bcf120a4b7110d))
+  > Chris hasn't been actively part of the project for a while.
+* **deps:** bump io.extendreality.tilia.indicators.objectpointers.unity ([976635c](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/976635c23abedad8b9a67758ad46a2fa58d5bf8f))
+  > Bumps [io.extendreality.tilia.indicators.objectpointers.unity](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity) from 1.8.2 to 1.8.4. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/compare/v1.8.2...v1.8.4)
+
 ### [1.8.2](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v1.8.1...v1.8.2) (2022-03-15)
 
 #### Miscellaneous Chores

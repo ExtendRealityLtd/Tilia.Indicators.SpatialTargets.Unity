@@ -2,6 +2,9 @@
 {
     using UnityEngine;
 
+    /// <summary>
+    /// Provides the ability to tag a spatial target as disabled.
+    /// </summary>
     public class SpatialTargetDisabledTag : MonoBehaviour
     {
         /// <summary>

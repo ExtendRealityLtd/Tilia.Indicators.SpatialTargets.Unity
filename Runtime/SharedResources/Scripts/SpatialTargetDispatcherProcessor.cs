@@ -1,8 +1,7 @@
 ﻿namespace Tilia.Indicators.SpatialTargets
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using Tilia.Indicators.SpatialTargets.Collection;
+    using UnityEngine;
     using Zinnia.Data.Type;
 
     /// <summary>
@@ -10,23 +9,49 @@
     /// </summary>
     public class SpatialTargetDispatcherProcessor : Dispatcher
     {
+        [Tooltip("The Dispatcher collection to attempt to process.")]
+        [SerializeField]
+        private DispatcherObservableList dispatcherTargets;
         /// <summary>
         /// The <see cref="Dispatcher"/> collection to attempt to process.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public DispatcherObservableList DispatcherTargets { get; set; }
+        public DispatcherObservableList DispatcherTargets
+        {
+            get
+            {
+                return dispatcherTargets;
+            }
+            set
+            {
+                dispatcherTargets = value;
+            }
+        }
+        [Tooltip("Whether to cease the processing of the collection after the first valid Dispatcher is processed.")]
+        [SerializeField]
+        private bool ceaseAfterFirstSourceProcessed;
         /// <summary>
         /// Whether to cease the processing of the collection after the first valid <see cref="Dispatcher"/> is processed.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public bool CeaseAfterFirstSourceProcessed { get; set; }
+        public bool CeaseAfterFirstSourceProcessed
+        {
+            get
+            {
+                return ceaseAfterFirstSourceProcessed;
+            }
+            set
+            {
+                ceaseAfterFirstSourceProcessed = value;
+            }
+        }
 
+        /// <summary>
+        /// The backing field for holding the value of <see cref="ActiveDispatcherProcess"/>.
+        /// </summary>
+        private Dispatcher activeDispatcherProcess;
         /// <summary>
         /// The current active <see cref="Dispatcher"/> being utilized.
         /// </summary>
-        public Dispatcher ActiveDispatcherProcess
+        public virtual Dispatcher ActiveDispatcherProcess
         {
             get => activeDispatcherProcess != null && activeDispatcherProcess.isActiveAndEnabled ? activeDispatcherProcess : null;
             protected set
@@ -34,10 +59,6 @@
                 activeDispatcherProcess = value;
             }
         }
-        /// <summary>
-        /// The backing field for holding the value of <see cref="ActiveDispatcherProcess"/>.
-        /// </summary>
-        private Dispatcher activeDispatcherProcess;
 
         /// <summary>
         /// The dispatch method to call.

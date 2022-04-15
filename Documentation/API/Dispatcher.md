@@ -10,6 +10,7 @@ The basis for all dispatcher types for the spatial targets.
 * [Properties]
   * [SourceValidity]
 * [Methods]
+  * [ClearSourceValidity()]
   * [DispatchEnter(SurfaceData)]
   * [DispatchExit(SurfaceData)]
   * [DispatchSelect(SurfaceData)]
@@ -53,6 +54,16 @@ public RuleContainer SourceValidity { get; set; }
 ```
 
 ### Methods
+
+#### ClearSourceValidity()
+
+Clears [SourceValidity].
+
+##### Declaration
+
+```
+public virtual void ClearSourceValidity()
+```
 
 #### DispatchEnter(SurfaceData)
 
@@ -260,6 +271,7 @@ protected abstract bool Select(SurfaceData data)
 [SpatialTargetDispatcherProcessor]: SpatialTargetDispatcherProcessor.md
 [Tilia.Indicators.SpatialTargets]: README.md
 [Dispatcher]: Dispatcher.md
+[SourceValidity]: Dispatcher.md#SourceValidity
 [SpatialTarget]: SpatialTarget.md
 [Inheritance]: #Inheritance
 [Namespace]: #Namespace
@@ -267,6 +279,7 @@ protected abstract bool Select(SurfaceData data)
 [Properties]: #Properties
 [SourceValidity]: #SourceValidity
 [Methods]: #Methods
+[ClearSourceValidity()]: #ClearSourceValidity
 [DispatchEnter(SurfaceData)]: #DispatchEnterSurfaceData
 [DispatchExit(SurfaceData)]: #DispatchExitSurfaceData
 [DispatchSelect(SurfaceData)]: #DispatchSelectSurfaceData

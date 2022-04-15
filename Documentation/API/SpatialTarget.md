@@ -32,6 +32,10 @@ A target in a spatial location that can react to given SurfaceData.
   * [SourceValidity]
   * [TargetContainer]
 * [Methods]
+  * [ClearSelectedTargetOverride()]
+  * [ClearSourcePointOverride()]
+  * [ClearSourceValidity()]
+  * [ClearTargetContainer()]
   * [CreateHoverPayload(SurfaceData)]
   * [CreateSelectedPayload(SurfaceData)]
   * [Deselect(Boolean)]
@@ -295,6 +299,46 @@ public GameObject TargetContainer { get; set; }
 ```
 
 ### Methods
+
+#### ClearSelectedTargetOverride()
+
+Clears [SelectedTargetOverride].
+
+##### Declaration
+
+```
+public virtual void ClearSelectedTargetOverride()
+```
+
+#### ClearSourcePointOverride()
+
+Clears [SourcePointOverride].
+
+##### Declaration
+
+```
+public virtual void ClearSourcePointOverride()
+```
+
+#### ClearSourceValidity()
+
+Clears [SourceValidity].
+
+##### Declaration
+
+```
+public virtual void ClearSourceValidity()
+```
+
+#### ClearTargetContainer()
+
+Clears [TargetContainer].
+
+##### Declaration
+
+```
+public virtual void ClearTargetContainer()
+```
 
 #### CreateHoverPayload(SurfaceData)
 
@@ -683,6 +727,10 @@ public virtual bool Select(SpatialTargetDispatcher dispatcher, SurfaceData data)
 [SpatialTarget.SurfaceDataUnityEvent]: SpatialTarget.SurfaceDataUnityEvent.md
 [HoveringElements]: SpatialTarget.md#HoveringElements
 [Select(SurfaceData)]: SpatialTarget.md#Select_SurfaceData_
+[SelectedTargetOverride]: SpatialTarget.md#SelectedTargetOverride
+[SourcePointOverride]: SpatialTarget.md#SourcePointOverride
+[SourceValidity]: SpatialTarget.md#SourceValidity
+[TargetContainer]: SpatialTarget.md#TargetContainer
 [FirstEntered]: SpatialTarget.md#FirstEntered
 [Entered]: SpatialTarget.md#Entered
 [Exited]: SpatialTarget.md#Exited
@@ -718,6 +766,10 @@ public virtual bool Select(SpatialTargetDispatcher dispatcher, SurfaceData data)
 [SourceValidity]: #SourceValidity
 [TargetContainer]: #TargetContainer
 [Methods]: #Methods
+[ClearSelectedTargetOverride()]: #ClearSelectedTargetOverride
+[ClearSourcePointOverride()]: #ClearSourcePointOverride
+[ClearSourceValidity()]: #ClearSourceValidity
+[ClearTargetContainer()]: #ClearTargetContainer
 [CreateHoverPayload(SurfaceData)]: #CreateHoverPayloadSurfaceData
 [CreateSelectedPayload(SurfaceData)]: #CreateSelectedPayloadSurfaceData
 [Deselect(Boolean)]: #DeselectBoolean

@@ -30,6 +30,8 @@ A [SpatialTargetDispatcher] collection that can be used to process multiple disp
 
 [Dispatcher.SourceValidity]
 
+[Dispatcher.ClearSourceValidity()]
+
 [Dispatcher.DispatchEnter(SurfaceData)]
 
 [Dispatcher.DoDispatchEnter(SurfaceData)]
@@ -63,7 +65,7 @@ The current active [Dispatcher] being utilized.
 ##### Declaration
 
 ```
-public Dispatcher ActiveDispatcherProcess { get; protected set; }
+public virtual Dispatcher ActiveDispatcherProcess { get; protected set; }
 ```
 
 #### CeaseAfterFirstSourceProcessed
@@ -215,6 +217,7 @@ protected override bool Select(SurfaceData data)
 
 [SpatialTargetDispatcher]: SpatialTargetDispatcher.md
 [Dispatcher.SourceValidity]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_SourceValidity
+[Dispatcher.ClearSourceValidity()]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_ClearSourceValidity
 [Dispatcher.DispatchEnter(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DispatchEnter_SurfaceData_
 [Dispatcher.DoDispatchEnter(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DoDispatchEnter_SurfaceData_
 [Dispatcher.DispatchExit(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DispatchExit_SurfaceData_

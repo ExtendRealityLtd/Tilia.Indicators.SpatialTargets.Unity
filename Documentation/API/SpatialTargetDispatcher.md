@@ -8,9 +8,11 @@ A Dispatcher that finds the appropriate [SpatialTarget] on the given data and di
 * [Namespace]
 * [Syntax]
 * [Properties]
+  * [DelselectAllOnEmptyTarget]
   * [SelectedTargets]
   * [TargetValidity]
 * [Methods]
+  * [ClearTargetValidity()]
   * [DeselectOtherTargetsOnSelect(SpatialTarget)]
   * [DoRemoveFromSelectedTargets(SpatialTarget)]
   * [Enter(SurfaceData)]
@@ -30,6 +32,8 @@ A Dispatcher that finds the appropriate [SpatialTarget] on the given data and di
 ##### Inherited Members
 
 [Dispatcher.SourceValidity]
+
+[Dispatcher.ClearSourceValidity()]
 
 [Dispatcher.DispatchEnter(SurfaceData)]
 
@@ -57,6 +61,16 @@ public class SpatialTargetDispatcher : Dispatcher
 
 ### Properties
 
+#### DelselectAllOnEmptyTarget
+
+Whether to de-select all selected targets when an empty target is selected.
+
+##### Declaration
+
+```
+public bool DelselectAllOnEmptyTarget { get; set; }
+```
+
 #### SelectedTargets
 
 A [SpatialTarget] collection of the currently selected targets.
@@ -78,6 +92,16 @@ public RuleContainer TargetValidity { get; set; }
 ```
 
 ### Methods
+
+#### ClearTargetValidity()
+
+Clears [TargetValidity].
+
+##### Declaration
+
+```
+public virtual void ClearTargetValidity()
+```
 
 #### DeselectOtherTargetsOnSelect(SpatialTarget)
 
@@ -235,6 +259,7 @@ protected override bool Select(SurfaceData data)
 
 [Dispatcher]: Dispatcher.md
 [Dispatcher.SourceValidity]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_SourceValidity
+[Dispatcher.ClearSourceValidity()]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_ClearSourceValidity
 [Dispatcher.DispatchEnter(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DispatchEnter_SurfaceData_
 [Dispatcher.DoDispatchEnter(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DoDispatchEnter_SurfaceData_
 [Dispatcher.DispatchExit(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DispatchExit_SurfaceData_
@@ -243,6 +268,7 @@ protected override bool Select(SurfaceData data)
 [Dispatcher.DoDispatchSelect(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DoDispatchSelect_SurfaceData_
 [Dispatcher.IsValidData(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_IsValidData_SurfaceData_
 [Tilia.Indicators.SpatialTargets]: README.md
+[TargetValidity]: SpatialTargetDispatcher.md#TargetValidity
 [SelectedTargets]: SpatialTargetDispatcher.md#SelectedTargets
 [Dispatcher.Enter(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_Enter_SurfaceData_
 [Dispatcher.Exit(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_Exit_SurfaceData_
@@ -253,9 +279,11 @@ protected override bool Select(SurfaceData data)
 [Namespace]: #Namespace
 [Syntax]: #Syntax
 [Properties]: #Properties
+[DelselectAllOnEmptyTarget]: #DelselectAllOnEmptyTarget
 [SelectedTargets]: #SelectedTargets
 [TargetValidity]: #TargetValidity
 [Methods]: #Methods
+[ClearTargetValidity()]: #ClearTargetValidity
 [DeselectOtherTargetsOnSelect(SpatialTarget)]: #DeselectOtherTargetsOnSelectSpatialTarget
 [DoRemoveFromSelectedTargets(SpatialTarget)]: #DoRemoveFromSelectedTargetsSpatialTarget
 [Enter(SurfaceData)]: #EnterSurfaceData

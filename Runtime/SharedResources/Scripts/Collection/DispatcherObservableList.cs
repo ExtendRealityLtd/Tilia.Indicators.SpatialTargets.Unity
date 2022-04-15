@@ -14,8 +14,6 @@
         /// Defines the event with the <see cref="Dispatcher"/>.
         /// </summary>
         [Serializable]
-        public class UnityEvent : UnityEvent<Dispatcher>
-        {
-        }
+        public class UnityEvent : UnityEvent<Dispatcher> { }
     }
 }

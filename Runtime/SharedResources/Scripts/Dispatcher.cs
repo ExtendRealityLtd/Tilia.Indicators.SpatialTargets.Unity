@@ -1,9 +1,5 @@
 ﻿namespace Tilia.Indicators.SpatialTargets
 {
-    using Malimbe.BehaviourStateRequirementMethod;
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using UnityEngine;
     using Zinnia.Data.Type;
     using Zinnia.Extension;
@@ -14,22 +10,45 @@
     /// </summary>
     public abstract class Dispatcher : MonoBehaviour
     {
+        [Tooltip("Determine which SurfaceData sources can interact with this Dispatcher")]
+        [SerializeField]
+        private RuleContainer sourceValidity;
         /// <summary>
         /// Determine which <see cref="SurfaceData"/> sources can interact with this <see cref="Dispatcher"/>.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public RuleContainer SourceValidity { get; set; }
+        public RuleContainer SourceValidity
+        {
+            get
+            {
+                return sourceValidity;
+            }
+            set
+            {
+                sourceValidity = value;
+            }
+        }
+
+        /// <summary>
+        /// Clears <see cref="SourceValidity"/>.
+        /// </summary>
+        public virtual void ClearSourceValidity()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            SourceValidity = default;
+        }
 
         /// <summary>
         /// Dispatches the Enter command for the given data.
         /// </summary>
         /// <param name="data">The data that has been entered.</param>
         /// <returns>Whether the dispatch was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool DispatchEnter(SurfaceData data)
         {
-            if (!IsValidData(data))
+            if (!this.IsValidState() || !IsValidData(data))
             {
                 return false;
             }
@@ -51,10 +70,9 @@
         /// </summary>
         /// <param name="data">The data that has been exited.</param>
         /// <returns>Whether the dispatch was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool DispatchExit(SurfaceData data)
         {
-            if (!IsValidData(data))
+            if (!this.IsValidState() || !IsValidData(data))
             {
                 return false;
             }
@@ -76,10 +94,9 @@
         /// </summary>
         /// <param name="data">The data that has been selected.</param>
         /// <returns>Whether the dispatch was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool DispatchSelect(SurfaceData data)
         {
-            if (!IsValidData(data))
+            if (!this.IsValidState() || !IsValidData(data))
             {
                 return false;
             }

@@ -1,7 +1,5 @@
 ﻿namespace Tilia.Indicators.SpatialTargets
 {
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using Tilia.Indicators.SpatialTargets.ComponentTags;
     using UnityEngine;
     using Zinnia.Data.Attribute;
@@ -13,63 +11,173 @@
     public class SpatialTargetConfigurator : MonoBehaviour
     {
         #region Facade Settings
+        [Header("Facade Settings")]
+        [Tooltip("The public interface facade.")]
+        [SerializeField]
+        [Restricted]
+        private SpatialTargetFacade facade;
         /// <summary>
         /// The public interface facade.
         /// </summary>
-        [Serialized]
-        [field: Header("Facade Settings"), DocumentedByXml, Restricted]
-        public SpatialTargetFacade Facade { get; protected set; }
+        public SpatialTargetFacade Facade
+        {
+            get
+            {
+                return facade;
+            }
+            protected set
+            {
+                facade = value;
+            }
+        }
         #endregion
 
         #region Reference Settings
+        [Header("Reference Settings")]
+        [Tooltip("The GameObject container for the enabled visual states.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject enabledStateContainer;
         /// <summary>
         /// The <see cref="GameObject"/> container for the enabled visual states.
         /// </summary>
-        [Serialized]
-        [field: Header("Reference Settings"), DocumentedByXml, Restricted]
-        public GameObject EnabledStateContainer { get; protected set; }
+        public GameObject EnabledStateContainer
+        {
+            get
+            {
+                return enabledStateContainer;
+            }
+            protected set
+            {
+                enabledStateContainer = value;
+            }
+        }
+        [Tooltip("The GameObject container for the disabled visual states.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject disabledStateContainer;
         /// <summary>
         /// The <see cref="GameObject"/> container for the disabled visual states.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObject DisabledStateContainer { get; protected set; }
+        public GameObject DisabledStateContainer
+        {
+            get
+            {
+                return disabledStateContainer;
+            }
+            protected set
+            {
+                disabledStateContainer = value;
+            }
+        }
+        [Tooltip("The GameObject container for the active visual states.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject activeStateContainer;
         /// <summary>
         /// The <see cref="GameObject"/> container for the active visual states.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObject ActiveStateContainer { get; protected set; }
+        public GameObject ActiveStateContainer
+        {
+            get
+            {
+                return activeStateContainer;
+            }
+            protected set
+            {
+                activeStateContainer = value;
+            }
+        }
+        [Tooltip("The GameObject container for the collision volume management.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject collisionLogicContainer;
         /// <summary>
         /// The <see cref="GameObject"/> container for the collision volume management.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObject CollisionLogicContainer { get; protected set; }
+        public GameObject CollisionLogicContainer
+        {
+            get
+            {
+                return collisionLogicContainer;
+            }
+            protected set
+            {
+                collisionLogicContainer = value;
+            }
+        }
+        [Tooltip("The GameObject container for the source locking to origin management.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject lockSourceToOriginLogicContainer;
         /// <summary>
         /// The <see cref="GameObject"/> container for the source locking to origin management.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObject LockSourceToOriginLogicContainer { get; protected set; }
+        public GameObject LockSourceToOriginLogicContainer
+        {
+            get
+            {
+                return lockSourceToOriginLogicContainer;
+            }
+            protected set
+            {
+                lockSourceToOriginLogicContainer = value;
+            }
+        }
+        [Tooltip("The GameObject container for the hiding the source cursor.")]
+        [SerializeField]
+        [Restricted]
+        private GameObject hideSourceCursorLogicContainer;
         /// <summary>
         /// The <see cref="GameObject"/> container for the hiding the source cursor.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public GameObject HideSourceCursorLogicContainer { get; protected set; }
+        public GameObject HideSourceCursorLogicContainer
+        {
+            get
+            {
+                return hideSourceCursorLogicContainer;
+            }
+            protected set
+            {
+                hideSourceCursorLogicContainer = value;
+            }
+        }
+        [Tooltip("The tag that denotes if the collision volume should be in the disabled mode.")]
+        [SerializeField]
+        [Restricted]
+        private SpatialTargetDisabledTag disabledTag;
         /// <summary>
         /// The tag that denotes if the collision volume should be in the disabled mode.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public SpatialTargetDisabledTag DisabledTag { get; protected set; }
+        public SpatialTargetDisabledTag DisabledTag
+        {
+            get
+            {
+                return disabledTag;
+            }
+            protected set
+            {
+                disabledTag = value;
+            }
+        }
+        [Tooltip("The SpatialTarget controller for this configuration.")]
+        [SerializeField]
+        [Restricted]
+        private SpatialTarget targetController;
         /// <summary>
         /// The <see cref="SpatialTarget"/> controller for this configuration.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, Restricted]
-        public SpatialTarget TargetController { get; protected set; }
+        public SpatialTarget TargetController
+        {
+            get
+            {
+                return targetController;
+            }
+            protected set
+            {
+                targetController = value;
+            }
+        }
         #endregion
 
         /// <summary>

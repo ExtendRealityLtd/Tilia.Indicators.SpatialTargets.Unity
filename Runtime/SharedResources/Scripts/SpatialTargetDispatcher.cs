@@ -1,9 +1,7 @@
 ﻿namespace Tilia.Indicators.SpatialTargets
 {
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using System.Collections.Generic;
+    using UnityEngine;
     using Zinnia.Data.Type;
     using Zinnia.Extension;
     using Zinnia.Rule;
@@ -13,23 +11,58 @@
     /// </summary>
     public class SpatialTargetDispatcher : Dispatcher
     {
+        [Tooltip("Whether to de-select all selected targets when an empty target is selected.")]
+        [SerializeField]
+        private bool delselectAllOnEmptyTarget;
         /// <summary>
         /// Whether to de-select all selected targets when an empty target is selected.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public bool DelselectAllOnEmptyTarget { get; set; }
+        public bool DelselectAllOnEmptyTarget
+        {
+            get
+            {
+                return delselectAllOnEmptyTarget;
+            }
+            set
+            {
+                delselectAllOnEmptyTarget = value;
+            }
+        }
+        [Tooltip("Determine if the SpatialTarget can be dispatched to.")]
+        [SerializeField]
+        private RuleContainer targetValidity;
         /// <summary>
         /// Determine if the <see cref="SpatialTarget"/> can be dispatched to.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public RuleContainer TargetValidity { get; set; }
+        public RuleContainer TargetValidity
+        {
+            get
+            {
+                return targetValidity;
+            }
+            set
+            {
+                targetValidity = value;
+            }
+        }
 
         /// <summary>
         /// A <see cref="SpatialTarget"/> collection of the currently selected targets.
         /// </summary>
         public List<SpatialTarget> SelectedTargets { get; protected set; } = new List<SpatialTarget>();
+
+        /// <summary>
+        /// Clears <see cref="TargetValidity"/>.
+        /// </summary>
+        public virtual void ClearTargetValidity()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            TargetValidity = default;
+        }
 
         /// <summary>
         /// Removes the given target from the <see cref="SelectedTargets"/> collection.

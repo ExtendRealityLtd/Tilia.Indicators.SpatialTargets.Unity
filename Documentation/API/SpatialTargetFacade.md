@@ -25,9 +25,13 @@ The public interface into the SpatialTarget Prefab.
   * [UseSourcePointOverride]
   * [UseTargetOverride]
 * [Methods]
+  * [ClearConfiguration()]
+  * [ClearSourceValidity()]
   * [Deselect(Boolean)]
   * [OnAfterActionOnHoverChange()]
   * [OnAfterActionOnSelectChange()]
+  * [OnAfterActionsOnActivateChange()]
+  * [OnAfterActionsOnHoverChange()]
   * [OnAfterDeselectSelfDelayChange()]
   * [OnAfterIsEnabledChange()]
   * [OnAfterSourceValidityChange()]
@@ -207,6 +211,26 @@ public bool UseTargetOverride { get; set; }
 
 ### Methods
 
+#### ClearConfiguration()
+
+Clears [Configuration].
+
+##### Declaration
+
+```
+public virtual void ClearConfiguration()
+```
+
+#### ClearSourceValidity()
+
+Clears [SourceValidity].
+
+##### Declaration
+
+```
+public virtual void ClearSourceValidity()
+```
+
 #### Deselect(Boolean)
 
 De-selects the containing [SpatialTarget] if it is in a selected state.
@@ -225,22 +249,40 @@ public virtual void Deselect(bool keepInActivatingDispatcher = false)
 
 #### OnAfterActionOnHoverChange()
 
-Called after [ActionsOnHover] has been changed.
-
 ##### Declaration
 
 ```
+[Obsolete("Use `OnAfterActionsOnHoverChange` instead.")]
 protected virtual void OnAfterActionOnHoverChange()
 ```
 
 #### OnAfterActionOnSelectChange()
+
+##### Declaration
+
+```
+[Obsolete("Use `OnAfterActionsOnActivateChange` instead.")]
+protected virtual void OnAfterActionOnSelectChange()
+```
+
+#### OnAfterActionsOnActivateChange()
 
 Called after [ActionsOnActivate] has been changed.
 
 ##### Declaration
 
 ```
-protected virtual void OnAfterActionOnSelectChange()
+protected virtual void OnAfterActionsOnActivateChange()
+```
+
+#### OnAfterActionsOnHoverChange()
+
+Called after [ActionsOnHover] has been changed.
+
+##### Declaration
+
+```
+protected virtual void OnAfterActionsOnHoverChange()
 ```
 
 #### OnAfterDeselectSelfDelayChange()
@@ -301,9 +343,11 @@ protected virtual void OnAfterUseTargetOverrideChange()
 [ActionsOnActivate]: SpatialTargetFacade.md#ActionsOnActivate
 [DeselectSelf]: SpatialTargetFacade.ActivationActions.md#ActivationActions_DeselectSelf
 [SpatialTargetFacade]: SpatialTargetFacade.md
+[Configuration]: SpatialTargetFacade.md#Configuration
+[SourceValidity]: SpatialTargetFacade.md#SourceValidity
 [SpatialTarget]: SpatialTarget.md
-[ActionsOnHover]: SpatialTargetFacade.md#ActionsOnHover
 [ActionsOnActivate]: SpatialTargetFacade.md#ActionsOnActivate
+[ActionsOnHover]: SpatialTargetFacade.md#ActionsOnHover
 [DeselectSelfDelay]: SpatialTargetFacade.md#DeselectSelfDelay
 [IsEnabled]: SpatialTargetFacade.md#IsEnabled
 [SourceValidity]: SpatialTargetFacade.md#SourceValidity
@@ -330,9 +374,13 @@ protected virtual void OnAfterUseTargetOverrideChange()
 [UseSourcePointOverride]: #UseSourcePointOverride
 [UseTargetOverride]: #UseTargetOverride
 [Methods]: #Methods
+[ClearConfiguration()]: #ClearConfiguration
+[ClearSourceValidity()]: #ClearSourceValidity
 [Deselect(Boolean)]: #DeselectBoolean
 [OnAfterActionOnHoverChange()]: #OnAfterActionOnHoverChange
 [OnAfterActionOnSelectChange()]: #OnAfterActionOnSelectChange
+[OnAfterActionsOnActivateChange()]: #OnAfterActionsOnActivateChange
+[OnAfterActionsOnHoverChange()]: #OnAfterActionsOnHoverChange
 [OnAfterDeselectSelfDelayChange()]: #OnAfterDeselectSelfDelayChange
 [OnAfterIsEnabledChange()]: #OnAfterIsEnabledChange
 [OnAfterSourceValidityChange()]: #OnAfterSourceValidityChange

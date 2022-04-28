@@ -1,9 +1,5 @@
 ﻿namespace Tilia.Indicators.SpatialTargets
 {
-    using Malimbe.BehaviourStateRequirementMethod;
-    using Malimbe.MemberClearanceMethod;
-    using Malimbe.PropertySerializationAttribute;
-    using Malimbe.XmlDocumentationAttribute;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -27,98 +23,205 @@
         public class SurfaceDataUnityEvent : UnityEvent<SurfaceData> { }
 
         #region Target Settings
+        [Header("Target Settings")]
+        [Tooltip("Whether this SpatialTarget is selectable.")]
+        [SerializeField]
+        private bool isSelectable = true;
         /// <summary>
         /// Whether this <see cref="SpatialTarget"/> is selectable.
         /// </summary>
-        [Serialized]
-        [field: Header("Target Settings"), DocumentedByXml]
-        public bool IsSelectable { get; set; } = true;
+        public bool IsSelectable
+        {
+            get
+            {
+                return isSelectable;
+            }
+            set
+            {
+                isSelectable = value;
+            }
+        }
+        [Tooltip("Exits all HoveringElements when Select(SurfaceData) is executed successfully.")]
+        [SerializeField]
+        private bool exitAllHoveringOnActivated = true;
         /// <summary>
         /// Exits all <see cref="HoveringElements"/> when <see cref="Select(SurfaceData)"/> is executed successfully.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public bool ExitAllHoveringOnActivated { get; set; } = true;
+        public bool ExitAllHoveringOnActivated
+        {
+            get
+            {
+                return exitAllHoveringOnActivated;
+            }
+            set
+            {
+                exitAllHoveringOnActivated = value;
+            }
+        }
+        [Tooltip("Deactivates this SpatialTarget when this SpatialTarget is activated.")]
+        [SerializeField]
+        private bool deactivateSelfOnActivated = true;
         /// <summary>
         /// Deactivates this <see cref="SpatialTarget"/> when this <see cref="SpatialTarget"/> is activated.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public bool DeactivateSelfOnActivated { get; set; } = true;
+        public bool DeactivateSelfOnActivated
+        {
+            get
+            {
+                return deactivateSelfOnActivated;
+            }
+            set
+            {
+                deactivateSelfOnActivated = value;
+            }
+        }
+        [Tooltip("The delay duration to wait before deactivating.")]
+        [SerializeField]
+        private float deactivateDelay;
         /// <summary>
         /// The delay duration to wait before deactivating.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public float DeactivateDelay { get; set; }
+        public float DeactivateDelay
+        {
+            get
+            {
+                return deactivateDelay;
+            }
+            set
+            {
+                deactivateDelay = value;
+            }
+        }
+        [Tooltip("Deactivates any other SpatialTarget connected to the same SpatialTargetDispatcher when this SpatialTarget is activated.")]
+        [SerializeField]
+        private bool deactivateOtherSpatialTargetsOnActivated = true;
         /// <summary>
         /// Deactivates any other <see cref="SpatialTarget"/> connected to the same <see cref="SpatialTargetDispatcher"/> when this <see cref="SpatialTarget"/> is activated.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml]
-        public bool DeactivateOtherSpatialTargetsOnActivated { get; set; } = true;
+        public bool DeactivateOtherSpatialTargetsOnActivated
+        {
+            get
+            {
+                return deactivateOtherSpatialTargetsOnActivated;
+            }
+            set
+            {
+                deactivateOtherSpatialTargetsOnActivated = value;
+            }
+        }
+        [Tooltip("Determine which SurfaceData sources can interact with this SpatialTarget.")]
+        [SerializeField]
+        private RuleContainer sourceValidity;
         /// <summary>
         /// Determine which <see cref="SurfaceData"/> sources can interact with this <see cref="SpatialTarget"/>.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public RuleContainer SourceValidity { get; set; }
+        public RuleContainer SourceValidity
+        {
+            get
+            {
+                return sourceValidity;
+            }
+            set
+            {
+                sourceValidity = value;
+            }
+        }
+        [Tooltip("Specifies a GameObject that contains this SpatialTarget.")]
+        [SerializeField]
+        private GameObject targetContainer;
         /// <summary>
         /// Specifies a <see cref="GameObject"/> that contains this <see cref="SpatialTarget"/>.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public GameObject TargetContainer { get; set; }
+        public GameObject TargetContainer
+        {
+            get
+            {
+                return targetContainer;
+            }
+            set
+            {
+                targetContainer = value;
+            }
+        }
+        [Tooltip("Overrides the point at which SurfaceData source originally collided with this SpatialTarget.")]
+        [SerializeField]
+        private GameObject sourcePointOverride;
         /// <summary>
         /// Overrides the point at which <see cref="SurfaceData"/> source originally collided with this <see cref="SpatialTarget"/>.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public GameObject SourcePointOverride { get; set; }
+        public GameObject SourcePointOverride
+        {
+            get
+            {
+                return sourcePointOverride;
+            }
+            set
+            {
+                sourcePointOverride = value;
+            }
+        }
+        [Tooltip("Overrides the selected target.")]
+        [SerializeField]
+        private GameObject selectedTargetOverride;
         /// <summary>
         /// Overrides the selected target.
         /// </summary>
-        [Serialized, Cleared]
-        [field: DocumentedByXml]
-        public GameObject SelectedTargetOverride { get; set; }
+        public GameObject SelectedTargetOverride
+        {
+            get
+            {
+                return selectedTargetOverride;
+            }
+            set
+            {
+                selectedTargetOverride = value;
+            }
+        }
+        [Tooltip("The Transform properties to apply the selected target overrides on.")]
+        [SerializeField]
+        [UnityFlags]
+        private TransformProperties applySelectedTargetProperties = TransformProperties.Position | TransformProperties.Rotation;
         /// <summary>
         /// The <see cref="Transform"/> properties to apply the selected target overrides on.
         /// </summary>
-        [Serialized]
-        [field: DocumentedByXml, UnityFlags]
-        public TransformProperties ApplySelectedTargetProperties { get; set; } = TransformProperties.Position | TransformProperties.Rotation;
+        public TransformProperties ApplySelectedTargetProperties
+        {
+            get
+            {
+                return applySelectedTargetProperties;
+            }
+            set
+            {
+                applySelectedTargetProperties = value;
+            }
+        }
         #endregion
 
         #region Target Events
         /// <summary>
         /// Emitted when this <see cref="SpatialTarget"/> is entered for the first time.
         /// </summary>
-        [Header("Target Events"), DocumentedByXml]
+        [Header("Target Events")]
         public SurfaceDataUnityEvent FirstEntered = new SurfaceDataUnityEvent();
         /// <summary>
         /// Emitted when this <see cref="SpatialTarget"/> is entered.
         /// </summary>
-        [DocumentedByXml]
         public SurfaceDataUnityEvent Entered = new SurfaceDataUnityEvent();
         /// <summary>
         /// Emitted when this <see cref="SpatialTarget"/> is exited.
         /// </summary>
-        [DocumentedByXml]
         public SurfaceDataUnityEvent Exited = new SurfaceDataUnityEvent();
         /// <summary>
         /// Emitted when this <see cref="SpatialTarget"/> is exited for the last time.
         /// </summary>
-        [DocumentedByXml]
         public SurfaceDataUnityEvent LastExited = new SurfaceDataUnityEvent();
         /// <summary>
         /// Emitted when this <see cref="SpatialTarget"/> is activated.
         /// </summary>
-        [DocumentedByXml]
         public SurfaceDataUnityEvent Activated = new SurfaceDataUnityEvent();
         /// <summary>
         /// Emitted when this <see cref="SpatialTarget"/> is deactivated.
         /// </summary>
-        [DocumentedByXml]
         public UnityEvent Deactivated = new UnityEvent();
         #endregion
 
@@ -149,14 +252,65 @@
         protected SurfaceData selectedPayload = new SurfaceData();
 
         /// <summary>
+        /// Clears <see cref="SourceValidity"/>.
+        /// </summary>
+        public virtual void ClearSourceValidity()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            SourceValidity = default;
+        }
+
+        /// <summary>
+        /// Clears <see cref="TargetContainer"/>.
+        /// </summary>
+        public virtual void ClearTargetContainer()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            TargetContainer = default;
+        }
+
+        /// <summary>
+        /// Clears <see cref="SourcePointOverride"/>.
+        /// </summary>
+        public virtual void ClearSourcePointOverride()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            SourcePointOverride = default;
+        }
+
+        /// <summary>
+        /// Clears <see cref="SelectedTargetOverride"/>.
+        /// </summary>
+        public virtual void ClearSelectedTargetOverride()
+        {
+            if (!this.IsValidState())
+            {
+                return;
+            }
+
+            SelectedTargetOverride = default;
+        }
+
+        /// <summary>
         /// Reacts to <see cref="SurfaceData"/> entering the target spatial location.
         /// </summary>
         /// <param name="data">The entering data.</param>
         /// <returns>Whether the enter was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool Enter(SurfaceData data)
         {
-            if (!IsValidData(data))
+            if (!this.IsValidState() || !IsValidData(data))
             {
                 return false;
             }
@@ -193,10 +347,9 @@
         /// </summary>
         /// <param name="enteringObject">The entering object.</param>
         /// <returns>Whether the enter was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool Enter(GameObject enteringObject)
         {
-            if (enteringObject == null)
+            if (!this.IsValidState() || enteringObject == null)
             {
                 return false;
             }
@@ -219,10 +372,9 @@
         /// </summary>
         /// <param name="data">The exiting data.</param>
         /// <returns>Whether the exit was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool Exit(SurfaceData data)
         {
-            if (!IsValidData(data, true))
+            if (!this.IsValidState() || !IsValidData(data, true))
             {
                 return false;
             }
@@ -259,10 +411,9 @@
         /// </summary>
         /// <param name="exitingObject">The exiting object.</param>
         /// <returns>Whether the exit was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool Exit(GameObject exitingObject)
         {
-            if (exitingObject == null)
+            if (!this.IsValidState() || exitingObject == null)
             {
                 return false;
             }
@@ -286,10 +437,9 @@
         /// <param name="dispatcher">The dispatcher calling the method.</param>
         /// <param name="data">The selecting data.</param>
         /// <returns>Whether the select was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool Select(SpatialTargetDispatcher dispatcher, SurfaceData data)
         {
-            if (!IsSelectable)
+            if (!this.IsValidState() || !IsSelectable)
             {
                 return false;
             }
@@ -318,10 +468,9 @@
         /// </summary>
         /// <param name="data">The selecting data.</param>
         /// <returns>Whether the select was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool Select(SurfaceData data)
         {
-            if (!IsSelectable || !IsValidData(data, true))
+            if (!this.IsValidState() || !IsSelectable || !IsValidData(data, true))
             {
                 return false;
             }
@@ -374,10 +523,9 @@
         /// </summary>
         /// <param name="selectingObject">The selecting object.</param>
         /// <returns>Whether the select was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool Select(GameObject selectingObject)
         {
-            if (selectingObject == null)
+            if (!this.IsValidState() || selectingObject == null)
             {
                 return false;
             }
@@ -400,10 +548,9 @@
         /// </summary>
         /// <param name="keepInActivatingDispatcher">Whether to keep this in the <see cref="ActivatingDispatcher.SelectedTargets"/> collection.</param>
         /// <returns>Whether the de-select was successful.</returns>
-        [RequiresBehaviourState]
         public virtual bool Deselect(bool keepInActivatingDispatcher = false)
         {
-            if (!IsSelectable || !IsActivated)
+            if (!this.IsValidState() || !IsSelectable || !IsActivated)
             {
                 return false;
             }

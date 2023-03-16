@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.24](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v2.0.23...v2.0.24) (2023-03-16)
+
+#### Miscellaneous Chores
+
+* **deps:** bump io.extendreality.tilia.indicators.objectpointers.unity ([b8229f3](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/b8229f385c538ad5a1ddb87a7037a2a9afeb7026))
+  > Bumps [io.extendreality.tilia.indicators.objectpointers.unity](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity) from 2.1.17 to 2.1.19. - [Release notes](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/releases) - [Changelog](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/blob/master/CHANGELOG.md) - [Commits](https://github.com/ExtendRealityLtd/Tilia.Indicators.ObjectPointers.Unity/compare/v2.1.17...v2.1.19)
+
 ### [2.0.23](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v2.0.22...v2.0.23) (2023-03-16)
 
 #### Miscellaneous Chores

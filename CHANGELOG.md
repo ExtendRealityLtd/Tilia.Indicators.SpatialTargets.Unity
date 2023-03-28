@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v2.0.28...v2.1.0) (2023-03-28)
+
+#### Features
+
+* **Processor:** replace isActiveAndEnabled ([8baf5a5](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/8baf5a5c142e99b499a605bc91d618713e17cdbf))
+  > The isActiveAndEnabled call has been replaced with CheckIsActiveAndEnabled as this is more consistent.
+
 ### [2.0.28](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v2.0.27...v2.0.28) (2023-03-28)
 
 #### Miscellaneous Chores

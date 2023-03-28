@@ -3,6 +3,7 @@
     using Tilia.Indicators.SpatialTargets.Collection;
     using UnityEngine;
     using Zinnia.Data.Type;
+    using Zinnia.Extension;
 
     /// <summary>
     /// A <see cref="SpatialTargetDispatcher"/> collection that can be used to process multiple dispatchers from a single entry point.
@@ -53,7 +54,7 @@
         /// </summary>
         public virtual Dispatcher ActiveDispatcherProcess
         {
-            get => activeDispatcherProcess != null && activeDispatcherProcess.isActiveAndEnabled ? activeDispatcherProcess : null;
+            get => activeDispatcherProcess != null && activeDispatcherProcess.CheckIsActiveAndEnabled() ? activeDispatcherProcess : null;
             protected set
             {
                 activeDispatcherProcess = value;
@@ -135,7 +136,7 @@
             bool hasProcessed = false;
             foreach (Dispatcher process in DispatcherTargets.NonSubscribableElements)
             {
-                if (process != null && process.isActiveAndEnabled)
+                if (process != null && process.CheckIsActiveAndEnabled())
                 {
                     ActiveDispatcherProcess = process;
                     if (CeaseAfterFirstSourceProcessed)

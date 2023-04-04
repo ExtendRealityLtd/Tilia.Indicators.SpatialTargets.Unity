@@ -125,8 +125,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534091219632325
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,13 +182,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Operation.Extraction.ComponentGameObjectExtractor+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Failed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   source: {fileID: 0}
   pointerComponent: 0
 --- !u!1 &127534091327235061
@@ -309,8 +303,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534091440864113
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,8 +426,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534091474685472
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,9 +523,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   Entered:
     m_PersistentCalls:
       m_Calls:
@@ -547,9 +537,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   Exited:
     m_PersistentCalls:
       m_Calls:
@@ -564,9 +551,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   LastExited:
     m_PersistentCalls:
       m_Calls:
@@ -581,9 +565,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   Activated:
     m_PersistentCalls:
       m_Calls:
@@ -598,9 +579,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   Deactivated:
     m_PersistentCalls:
       m_Calls:
@@ -615,8 +593,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534091493285872
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,8 +639,6 @@ MonoBehaviour:
   Emitted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534091518215998
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,8 +766,9 @@ MonoBehaviour:
   Emitted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534091619984483
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +843,7 @@ GameObject:
   - component: {fileID: 127534091686666344}
   - component: {fileID: 127534091686666347}
   - component: {fileID: 127534091686666346}
+  - component: {fileID: 7694578220026259761}
   m_Layer: 0
   m_Name: DefaultMesh
   m_TagString: Untagged
@@ -934,6 +910,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &7694578220026259761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127534091686666343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b57956047a5624db03bc5a1afe6900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 127534091686666346}
+  pipelines:
+  - pipelineName: (?i)default
+    materials:
+    - {fileID: 2100000, guid: 003b2364e906a514f9bd51a2c5939562, type: 2}
+  - pipelineName: (?i)urp
+    materials:
+    - {fileID: 2100000, guid: 8910e263d6f48c0449f67bf031771f21, type: 2}
+  - pipelineName: (?i)hdrp
+    materials:
+    - {fileID: 2100000, guid: 2880dc9e6c5bbf84394812417a5be6d6, type: 2}
 --- !u!1 &127534091696459526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,8 +1017,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534091704758047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,13 +1110,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Operation.Extraction.ComponentGameObjectExtractor+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Failed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   source: {fileID: 0}
 --- !u!1 &127534091738178348
 GameObject:
@@ -1160,6 +1156,7 @@ GameObject:
   - component: {fileID: 127534091742233585}
   - component: {fileID: 127534091742233588}
   - component: {fileID: 127534091742233587}
+  - component: {fileID: 5029429964591863440}
   m_Layer: 0
   m_Name: DefaultMesh
   m_TagString: Untagged
@@ -1226,6 +1223,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5029429964591863440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127534091742233584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b57956047a5624db03bc5a1afe6900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 127534091742233587}
+  pipelines:
+  - pipelineName: (?i)default
+    materials:
+    - {fileID: 2100000, guid: 8b802ba51181dc74f955bb205070f95d, type: 2}
+  - pipelineName: (?i)urp
+    materials:
+    - {fileID: 2100000, guid: 34ccabf573e4bde43ae197d9be6d6dcc, type: 2}
+  - pipelineName: (?i)hdrp
+    materials:
+    - {fileID: 2100000, guid: a1595ab611c27134aa3a6f3078619132, type: 2}
 --- !u!1 &127534091749116551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,13 +1304,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Operation.Extraction.SurfaceDataCollisionDataExtractor+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Failed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   source:
     transform: {fileID: 0}
     useLocalValues: 0
@@ -1322,13 +1338,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Operation.Extraction.RaycastHitPointExtractor+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Failed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534091785890942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,6 +1385,7 @@ GameObject:
   - component: {fileID: 127534091832244384}
   - component: {fileID: 127534091832244387}
   - component: {fileID: 127534091832244386}
+  - component: {fileID: 4644170386514636181}
   m_Layer: 0
   m_Name: DefaultMesh
   m_TagString: Untagged
@@ -1439,6 +1452,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4644170386514636181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127534091832244447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b57956047a5624db03bc5a1afe6900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 127534091832244386}
+  pipelines:
+  - pipelineName: (?i)default
+    materials:
+    - {fileID: 2100000, guid: 44d57f528077b604ab33a9e1e6d18d07, type: 2}
+  - pipelineName: (?i)urp
+    materials:
+    - {fileID: 2100000, guid: 3e77d7e3cbdcf2442973c1929fa73a01, type: 2}
+  - pipelineName: (?i)hdrp
+    materials:
+    - {fileID: 2100000, guid: f352f8beb78b2a64d95b6aa5eb47ea11, type: 2}
 --- !u!1 &127534091900245251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,8 +1526,9 @@ MonoBehaviour:
   Emitted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092039175768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,38 +1651,21 @@ MonoBehaviour:
   FirstEntered:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   Entered:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   Exited:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   LastExited:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   Activated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Tilia.Indicators.SpatialTargets.SpatialTarget+SurfaceDataUnityEvent,
-      Tilia.Indicators.SpatialTargets.Unity.Runtime, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   Deactivated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   configuration: {fileID: 127534091474685476}
 --- !u!1 &127534092064436858
 GameObject:
@@ -1731,8 +1751,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092113486011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,8 +1838,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092121755821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,8 +1931,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534092129916590
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,8 +2153,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092306604073
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,8 +2270,9 @@ MonoBehaviour:
   Emitted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092473461657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2302,8 +2324,9 @@ MonoBehaviour:
   Emitted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092483777664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,8 +2406,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534092497860241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,8 +2485,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534092550963661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,13 +2605,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Operation.Extraction.ComponentGameObjectExtractor+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Failed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   source: {fileID: 0}
   pointerComponent: 3
 --- !u!1 &127534092634686285
@@ -2721,8 +2736,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092647172911
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,8 +2790,9 @@ MonoBehaviour:
   Emitted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092647953964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,6 +2868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b20687ab7424fdb9831faad0eef53ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  processCollisionsWhenDisabled: 1
   emittedTypes: -1
   statesToProcess: 1
   forwardingSourceValidity:
@@ -2869,19 +2887,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.Collision.CollisionNotifier+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   CollisionChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Tracking.Collision.CollisionNotifier+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   CollisionStopped:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Tracking.Collision.CollisionNotifier+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   stopCollisionsOnDisable: 1
+  colliderValidity:
+    field: {fileID: 0}
+  containingTransformValidity:
+    field: {fileID: 0}
+  stayDelayInterval: 0
 --- !u!1 &127534092670125168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,6 +2985,7 @@ GameObject:
   - component: {fileID: 127534092712721046}
   - component: {fileID: 127534092712721049}
   - component: {fileID: 127534092712721048}
+  - component: {fileID: 7086196326484142618}
   m_Layer: 0
   m_Name: DefaultMesh
   m_TagString: Untagged
@@ -3034,6 +3052,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &7086196326484142618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127534092712721045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b57956047a5624db03bc5a1afe6900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 127534092712721048}
+  pipelines:
+  - pipelineName: (?i)default
+    materials:
+    - {fileID: 2100000, guid: 32b61d0584889c445838ed492f6bd6eb, type: 2}
+  - pipelineName: (?i)urp
+    materials:
+    - {fileID: 2100000, guid: c2abc586805238b47bae10dad6499c1e, type: 2}
+  - pipelineName: (?i)hdrp
+    materials:
+    - {fileID: 2100000, guid: 782c54a29f2a0ec47b17f4bd79ed809b, type: 2}
 --- !u!1 &127534092755802898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3123,8 +3164,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534092845041000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,8 +3341,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Event.Proxy.SurfaceDataProxyEmitter+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  receiveValidity:
+    field: {fileID: 0}
+  ruleSource: 0
 --- !u!1 &127534092927451265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,8 +3434,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &127534092997966680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3407,6 +3445,7 @@ GameObject:
   - component: {fileID: 127534092997966681}
   - component: {fileID: 127534092997966684}
   - component: {fileID: 127534092997966683}
+  - component: {fileID: 5719500286427784129}
   m_Layer: 0
   m_Name: DefaultMesh
   m_TagString: Untagged
@@ -3473,6 +3512,29 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5719500286427784129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127534092997966680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b57956047a5624db03bc5a1afe6900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 127534092997966683}
+  pipelines:
+  - pipelineName: (?i)default
+    materials:
+    - {fileID: 2100000, guid: 5352e738bd087e944a5630e211b24e1b, type: 2}
+  - pipelineName: (?i)urp
+    materials:
+    - {fileID: 2100000, guid: 2798b827cbc851c4d9b994d67f7397b6, type: 2}
+  - pipelineName: (?i)hdrp
+    materials:
+    - {fileID: 2100000, guid: 9355bc1e035b2dc47b0dcb9a2a1e0d20, type: 2}
 --- !u!1 &127534093027629300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,26 +3742,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6b6179884db4f45985375ba8170f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Obtained:
+    m_PersistentCalls:
+      m_Calls: []
   Found:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Data.Collection.List.UnityObjectObservableList+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   NotFound:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Data.Collection.List.UnityObjectObservableList+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   IsEmpty:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   IsPopulated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   Populated:
     m_PersistentCalls:
       m_Calls:
@@ -3725,18 +3782,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Collection.List.UnityObjectObservableList+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Added:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Data.Collection.List.UnityObjectObservableList+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Removed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Data.Collection.List.UnityObjectObservableList+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Emptied:
     m_PersistentCalls:
       m_Calls:
@@ -3762,8 +3813,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Data.Collection.List.UnityObjectObservableList+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   currentIndex: 0
   elements: []
 --- !u!1 &690041721537829059
@@ -3823,13 +3872,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.Collision.Active.Operation.Extraction.NotifierContainerExtractor+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Failed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   source:
     forwardSource: {fileID: 0}
     isTrigger: 0
@@ -3891,13 +3936,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.Collision.Active.Operation.Extraction.NotifierContainerExtractor+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Failed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   source:
     forwardSource: {fileID: 0}
     isTrigger: 0
@@ -4055,6 +4096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b20687ab7424fdb9831faad0eef53ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  processCollisionsWhenDisabled: 1
   emittedTypes: -1
   statesToProcess: 5
   forwardingSourceValidity:
@@ -4073,13 +4115,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.Collision.CollisionNotifier+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   CollisionChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: Zinnia.Tracking.Collision.CollisionNotifier+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   CollisionStopped:
     m_PersistentCalls:
       m_Calls:
@@ -4094,9 +4132,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.Collision.CollisionNotifier+UnityEvent, Zinnia.Runtime,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   stopCollisionsOnDisable: 1
+  colliderValidity:
+    field: {fileID: 0}
+  containingTransformValidity:
+    field: {fileID: 0}
+  stayDelayInterval: 0
 --- !u!1 &7789618099214846136
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,13 +4206,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: Zinnia.Tracking.Collision.Active.Operation.Extraction.NotifierContainerExtractor+UnityEvent,
-      Zinnia.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   Failed:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   source:
     forwardSource: {fileID: 0}
     isTrigger: 0

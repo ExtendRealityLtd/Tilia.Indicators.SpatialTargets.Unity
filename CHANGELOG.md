@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v2.1.2...v2.2.0) (2023-04-04)
+
+#### Features
+
+* **Resources:** add multiple render pipeline materials ([c6fc63d](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/c6fc63da0f0637bc92b026e98a91fafa9c534531))
+  > The prefab now uses the Pipeline Material Applier to provide multiple material types for the main render pipelines to improve compatability.
+
 ### [2.1.2](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v2.1.1...v2.1.2) (2023-04-03)
 
 #### Miscellaneous Chores

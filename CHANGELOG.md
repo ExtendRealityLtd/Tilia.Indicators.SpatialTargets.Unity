@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v2.2.17...v2.3.0) (2024-05-11)
+
+#### Features
+
+* **Dispatcher:** allow dispatch operations to accept a GameObject ([ce392b6](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/commit/ce392b6ada423b1947d81c2633f30f65bb0a14a7))
+  > The Dispatch operations of Enter/Exit/Select now have methods where they can accept a GameObject as the target to dispatch to.
+
 ### [2.2.17](https://github.com/ExtendRealityLtd/Tilia.Indicators.SpatialTargets.Unity/compare/v2.2.16...v2.2.17) (2024-04-17)
 
 #### Miscellaneous Chores

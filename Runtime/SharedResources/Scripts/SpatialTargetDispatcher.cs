@@ -137,12 +137,12 @@
         /// <returns>The found <see cref="SpatialTarget"/>.</returns>
         protected virtual SpatialTarget GetSpatialTarget(SurfaceData data)
         {
-            if (data == null || data.CollisionData.transform == null)
+            if (data == null || (data.CollisionData.transform == null && data.Transform == null))
             {
                 return null;
             }
 
-            SpatialTarget foundTarget = data.CollisionData.transform.gameObject.TryGetComponent<SpatialTarget>(false, true);
+            SpatialTarget foundTarget = (data.CollisionData.transform == null ? data.Transform : data.CollisionData.transform).gameObject.TryGetComponent<SpatialTarget>(false, true);
 
             if (foundTarget == null || !TargetValidity.Accepts(foundTarget.TargetContainer != null ? foundTarget.TargetContainer : foundTarget.gameObject))
             {

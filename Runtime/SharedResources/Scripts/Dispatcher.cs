@@ -114,6 +114,81 @@
         }
 
         /// <summary>
+        /// Dispatches the Enter command for the given data.
+        /// </summary>
+        /// <param name="data">The data that has been entered.</param>
+        /// <returns>Whether the dispatch was successful.</returns>
+        public virtual bool DispatchEnter(GameObject data)
+        {
+            if (!this.IsValidState() || data == null)
+            {
+                return false;
+            }
+
+            SurfaceData surfaceData = new SurfaceData(data.transform);
+            return Enter(surfaceData);
+        }
+
+        /// <summary>
+        /// Dispatches the Enter command for the given data.
+        /// </summary>
+        /// <param name="data">The data that has been entered.</param>
+        public virtual void DoDispatchEnter(GameObject data)
+        {
+            DispatchEnter(data);
+        }
+
+        /// <summary>
+        /// Dispatches the Exit command for the given data.
+        /// </summary>
+        /// <param name="data">The data that has been exited.</param>
+        /// <returns>Whether the dispatch was successful.</returns>
+        public virtual bool DispatchExit(GameObject data)
+        {
+            if (!this.IsValidState() || data == null)
+            {
+                return false;
+            }
+
+            SurfaceData surfaceData = new SurfaceData(data.transform);
+            return Exit(surfaceData);
+        }
+
+        /// <summary>
+        /// Dispatches the Exit command for the given data.
+        /// </summary>
+        /// <param name="data">The data that has been exited.</param>
+        public virtual void DoDispatchExit(GameObject data)
+        {
+            DispatchExit(data);
+        }
+
+        /// <summary>
+        /// Dispatches the Select command for the given data.
+        /// </summary>
+        /// <param name="data">The data that has been selected.</param>
+        /// <returns>Whether the dispatch was successful.</returns>
+        public virtual bool DispatchSelect(GameObject data)
+        {
+            if (!this.IsValidState() || data == null)
+            {
+                return false;
+            }
+
+            SurfaceData surfaceData = new SurfaceData(data.transform);
+            return Select(surfaceData);
+        }
+
+        /// <summary>
+        /// Dispatches the Select command for the given data.
+        /// </summary>
+        /// <param name="data">The data that has been selected.</param>
+        public virtual void DoDispatchSelect(GameObject data)
+        {
+            DispatchSelect(data);
+        }
+
+        /// <summary>
         /// Processes the given data as an Enter command on a <see cref="SpatialTarget"/>.
         /// </summary>
         /// <param name="data">The data that has been entered.</param>

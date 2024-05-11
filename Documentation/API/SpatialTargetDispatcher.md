@@ -47,6 +47,18 @@ A Dispatcher that finds the appropriate [SpatialTarget] on the given data and di
 
 [Dispatcher.DoDispatchSelect(SurfaceData)]
 
+[Dispatcher.DispatchEnter(GameObject)]
+
+[Dispatcher.DoDispatchEnter(GameObject)]
+
+[Dispatcher.DispatchExit(GameObject)]
+
+[Dispatcher.DoDispatchExit(GameObject)]
+
+[Dispatcher.DispatchSelect(GameObject)]
+
+[Dispatcher.DoDispatchSelect(GameObject)]
+
 [Dispatcher.IsValidData(SurfaceData)]
 
 ##### Namespace
@@ -266,6 +278,12 @@ protected override bool Select(SurfaceData data)
 [Dispatcher.DoDispatchExit(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DoDispatchExit_SurfaceData_
 [Dispatcher.DispatchSelect(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DispatchSelect_SurfaceData_
 [Dispatcher.DoDispatchSelect(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DoDispatchSelect_SurfaceData_
+[Dispatcher.DispatchEnter(GameObject)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DispatchEnter_GameObject_
+[Dispatcher.DoDispatchEnter(GameObject)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DoDispatchEnter_GameObject_
+[Dispatcher.DispatchExit(GameObject)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DispatchExit_GameObject_
+[Dispatcher.DoDispatchExit(GameObject)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DoDispatchExit_GameObject_
+[Dispatcher.DispatchSelect(GameObject)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DispatchSelect_GameObject_
+[Dispatcher.DoDispatchSelect(GameObject)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_DoDispatchSelect_GameObject_
 [Dispatcher.IsValidData(SurfaceData)]: Dispatcher.md#Tilia_Indicators_SpatialTargets_Dispatcher_IsValidData_SurfaceData_
 [Tilia.Indicators.SpatialTargets]: README.md
 [TargetValidity]: SpatialTargetDispatcher.md#TargetValidity

@@ -11,11 +11,17 @@ The basis for all dispatcher types for the spatial targets.
   * [SourceValidity]
 * [Methods]
   * [ClearSourceValidity()]
+  * [DispatchEnter(GameObject)]
   * [DispatchEnter(SurfaceData)]
+  * [DispatchExit(GameObject)]
   * [DispatchExit(SurfaceData)]
+  * [DispatchSelect(GameObject)]
   * [DispatchSelect(SurfaceData)]
+  * [DoDispatchEnter(GameObject)]
   * [DoDispatchEnter(SurfaceData)]
+  * [DoDispatchExit(GameObject)]
   * [DoDispatchExit(SurfaceData)]
+  * [DoDispatchSelect(GameObject)]
   * [DoDispatchSelect(SurfaceData)]
   * [Enter(SurfaceData)]
   * [Exit(SurfaceData)]
@@ -65,6 +71,28 @@ Clears [SourceValidity].
 public virtual void ClearSourceValidity()
 ```
 
+#### DispatchEnter(GameObject)
+
+Dispatches the Enter command for the given data.
+
+##### Declaration
+
+```
+public virtual bool DispatchEnter(GameObject data)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | data | The data that has been entered. |
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Boolean | Whether the dispatch was successful. |
+
 #### DispatchEnter(SurfaceData)
 
 Dispatches the Enter command for the given data.
@@ -80,6 +108,28 @@ public virtual bool DispatchEnter(SurfaceData data)
 | Type | Name | Description |
 | --- | --- | --- |
 | SurfaceData | data | The data that has been entered. |
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Boolean | Whether the dispatch was successful. |
+
+#### DispatchExit(GameObject)
+
+Dispatches the Exit command for the given data.
+
+##### Declaration
+
+```
+public virtual bool DispatchExit(GameObject data)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | data | The data that has been exited. |
 
 ##### Returns
 
@@ -109,6 +159,28 @@ public virtual bool DispatchExit(SurfaceData data)
 | --- | --- |
 | System.Boolean | Whether the dispatch was successful. |
 
+#### DispatchSelect(GameObject)
+
+Dispatches the Select command for the given data.
+
+##### Declaration
+
+```
+public virtual bool DispatchSelect(GameObject data)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | data | The data that has been selected. |
+
+##### Returns
+
+| Type | Description |
+| --- | --- |
+| System.Boolean | Whether the dispatch was successful. |
+
 #### DispatchSelect(SurfaceData)
 
 Dispatches the Select command for the given data.
@@ -131,6 +203,22 @@ public virtual bool DispatchSelect(SurfaceData data)
 | --- | --- |
 | System.Boolean | Whether the dispatch was successful. |
 
+#### DoDispatchEnter(GameObject)
+
+Dispatches the Enter command for the given data.
+
+##### Declaration
+
+```
+public virtual void DoDispatchEnter(GameObject data)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | data | The data that has been entered. |
+
 #### DoDispatchEnter(SurfaceData)
 
 Dispatches the Enter command for the given data.
@@ -147,6 +235,22 @@ public virtual void DoDispatchEnter(SurfaceData data)
 | --- | --- | --- |
 | SurfaceData | data | The data that has been entered. |
 
+#### DoDispatchExit(GameObject)
+
+Dispatches the Exit command for the given data.
+
+##### Declaration
+
+```
+public virtual void DoDispatchExit(GameObject data)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | data | The data that has been exited. |
+
 #### DoDispatchExit(SurfaceData)
 
 Dispatches the Exit command for the given data.
@@ -162,6 +266,22 @@ public virtual void DoDispatchExit(SurfaceData data)
 | Type | Name | Description |
 | --- | --- | --- |
 | SurfaceData | data | The data that has been exited. |
+
+#### DoDispatchSelect(GameObject)
+
+Dispatches the Select command for the given data.
+
+##### Declaration
+
+```
+public virtual void DoDispatchSelect(GameObject data)
+```
+
+##### Parameters
+
+| Type | Name | Description |
+| --- | --- | --- |
+| GameObject | data | The data that has been selected. |
 
 #### DoDispatchSelect(SurfaceData)
 
@@ -280,11 +400,17 @@ protected abstract bool Select(SurfaceData data)
 [SourceValidity]: #SourceValidity
 [Methods]: #Methods
 [ClearSourceValidity()]: #ClearSourceValidity
+[DispatchEnter(GameObject)]: #DispatchEnterGameObject
 [DispatchEnter(SurfaceData)]: #DispatchEnterSurfaceData
+[DispatchExit(GameObject)]: #DispatchExitGameObject
 [DispatchExit(SurfaceData)]: #DispatchExitSurfaceData
+[DispatchSelect(GameObject)]: #DispatchSelectGameObject
 [DispatchSelect(SurfaceData)]: #DispatchSelectSurfaceData
+[DoDispatchEnter(GameObject)]: #DoDispatchEnterGameObject
 [DoDispatchEnter(SurfaceData)]: #DoDispatchEnterSurfaceData
+[DoDispatchExit(GameObject)]: #DoDispatchExitGameObject
 [DoDispatchExit(SurfaceData)]: #DoDispatchExitSurfaceData
+[DoDispatchSelect(GameObject)]: #DoDispatchSelectGameObject
 [DoDispatchSelect(SurfaceData)]: #DoDispatchSelectSurfaceData
 [Enter(SurfaceData)]: #EnterSurfaceData
 [Exit(SurfaceData)]: #ExitSurfaceData
